@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="750.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
+   <children>
+      <TextField fx:id="numberBox" layoutX="109.0" layoutY="645.0" prefHeight="25.0" prefWidth="55.0" />
+      <Label layoutX="14.0" layoutY="649.0" text="Type a Number" />
+      <Button fx:id="addButton" layoutX="177.0" layoutY="645.0" mnemonicParsing="false" onAction="#addNumber" text="add" />
+      <Circle fx:id="circle1" fill="#5ed8ff" layoutX="375.0" layoutY="100.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle2" fill="#5ed8ff" layoutX="277.0" layoutY="155.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle3" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle4" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle5" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle6" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle7" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle8" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle9" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle10" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle11" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle12" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle13" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle14" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle15" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle16" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle17" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Text fx:id="value1" layoutX="364.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="value2" layoutX="364.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="value3" layoutX="462.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="value4" layoutX="462.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="value5" layoutX="462.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="value6" layoutX="462.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="value7" layoutX="462.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="value8" layoutX="462.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="value9" layoutX="462.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="value10" layoutX="462.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="value11" layoutX="462.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="value12" layoutX="462.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="value13" layoutX="462.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="value14" layoutX="462.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="value15" layoutX="462.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="value16" layoutX="462.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="value17" layoutX="462.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+   </children>
+</AnchorPane>
