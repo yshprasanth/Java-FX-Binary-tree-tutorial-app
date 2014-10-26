@@ -38,7 +38,8 @@ public class Tree
 	}	
     
     public void add(int x){
-    	root = add(root, x, 375, 100, 364, 105);
+    	root = add(root, x, 600, 100, 589, 105);
+    	root.bEY = root.cY + 20;// root has larger radius therefore its edge differs
     }
     
     public TreeNode add(TreeNode node, int x, double cX, double cY, double tX, double tY){
@@ -47,22 +48,20 @@ public class Tree
     		node = temp;
     	
     		node.cX = cX;
-    		System.out.println(node.cX);
     		node.cY = cY;
-    		System.out.println(node.cY);
     		node.tX = tX;
-    		System.out.println(node.tX);
     		node.tY = tY;
-    		System.out.println(node.tY);
-    		
+    		node.eX = cX;
+    		node.tEY = cY - 15;
+    		node.bEY = cY + 15;
     		
     	}
     	else if(x < node.info){
-    			node.left = add(node.left, x, cX - 98, cY + 55, tX - 98, tY + 55);
+    			node.left = add(node.left, x, cX - (200/depthN(node)*1.1), cY + 55, tX - (200/depthN(node)*1.1), tY + 55);
     			node.left.parent = node;
     		}
     	else if(x > node.info){
-    			node.right = add(node.right, x, cX + 98, cY + 55, tX + 98, tY + 55);
+    			node.right = add(node.right, x, cX + (200/depthN(node)*1.1), cY + 55, tX + (200/depthN(node)*1.1), tY + 55);
     			node.right.parent = node;
     		}
     	return node;
@@ -91,11 +90,35 @@ public class Tree
 
     }
 
+    
+    private double depthN(TreeNode node){
+    	if(node == root){
+    		return 0.8;
+    	}
+    	double count = 1.0;
+    	TreeNode current = root;
+    	while (node.info != current.info) // while value isn't found
+        {
+            if (node.info < current.info) // value less than current's data
+            {
+                count++; // increment depth
+                current = current.left; // go to the left
+            } 
+            else 
+            {
+                count++; // increment depth
+                current = current.right; // go to the right
+            }
+        }
+    	return count;
+    	
+    }
+
     /**
-     * Calculates the depth of a node
-     * @param value the node's value whose depth we want to find
-     * @return the depth
-     */
+    * Calculates the depth of a node
+    * @param value the node's value whose depth we want to find
+    * @return the depth
+    */
     public int depth(int value)
     {
         int count = 0;
@@ -240,6 +263,9 @@ public class Tree
     public TreeNode binarySearch(TreeNode root, int value) 
     {
     	TreeNode current = root;
+    	if(root == null){
+    		return null;
+    	}
     	if(value < current.info && current.left != null){
     		current = binarySearch(current.left, value);
     	}

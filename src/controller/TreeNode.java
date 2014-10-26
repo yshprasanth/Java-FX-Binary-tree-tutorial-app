@@ -4,7 +4,7 @@ public class TreeNode{
 	
 	public int info;
 	public TreeNode left, right, parent;
-	public double cX, cY, tX, tY;   // circle and text coordinates
+	public double cX, cY, tX, tY, eX, tEY, bEY;// circle and text and edge coordinates
 	
 	public TreeNode(int info){
 		this.info = info;
@@ -15,6 +15,9 @@ public class TreeNode{
 		cY = 0;
 		tX = 0;
 		tY = 0;
+		eX = 0;
+		tEY = 0;
+		bEY = 0;
 	}
 	
 	
