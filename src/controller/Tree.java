@@ -39,6 +39,7 @@ public class Tree
     
     public void add(int x){
     	root = add(root, x, 600, 100, 589, 105);
+    	root.bEY = root.cY + 20;// root has larger radius therefore its edge differs
     }
     
     public TreeNode add(TreeNode node, int x, double cX, double cY, double tX, double tY){
@@ -47,18 +48,12 @@ public class Tree
     		node = temp;
     	
     		node.cX = cX;
-//    		System.out.println(node.cX);
     		node.cY = cY;
-//    		System.out.println(node.cY);
     		node.tX = tX;
-//    		System.out.println(node.tX);
     		node.tY = tY;
-//    		System.out.println(node.tY);
     		node.eX = cX;
     		node.tEY = cY - 15;
     		node.bEY = cY + 15;
-    		
-    		
     		
     	}
     	else if(x < node.info){
@@ -268,6 +263,9 @@ public class Tree
     public TreeNode binarySearch(TreeNode root, int value) 
     {
     	TreeNode current = root;
+    	if(root == null){
+    		return null;
+    	}
     	if(value < current.info && current.left != null){
     		current = binarySearch(current.left, value);
     	}

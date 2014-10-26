@@ -3,6 +3,8 @@ package controller;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javax.swing.JOptionPane;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -145,10 +147,19 @@ public class Controller implements Initializable{
 	private Line[] l;
 	private Tree tree = new Tree();
 	private int arrayPos = 0;
-//	TreeNode parent = new TreeNode(0);
 	
 	public void addNumber(ActionEvent event){
 		String temp = numberBox.getText();
+		if(!tree.contains(Integer.parseInt(temp))){
+			add(temp);
+			
+		}
+		else{
+			JOptionPane.showMessageDialog(null, "Sorry you cannot enter the same number more than once");
+		}
+	}
+	private void add(String temp){
+		
 		tree.add(Integer.parseInt(temp));
 		TreeNode current = tree.binarySearch(Integer.parseInt(temp));
 		
@@ -162,21 +173,17 @@ public class Controller implements Initializable{
 		t[arrayPos].setVisible(true);
 		if(arrayPos > 0){
 			
-			l[arrayPos].setEndX(current.eX - l[arrayPos].getLayoutBounds().getMinX());
-			System.out.println("end x of node " + current.eX);
-			l[arrayPos].setEndY(current.tEY - l[arrayPos].getLayoutBounds().getMinY());
-			System.out.println("end y of line" + current.tEY);
-			l[arrayPos].setStartX(current.parent.eX - l[arrayPos].getLayoutBounds().getMinX());
-			System.out.println("start x of line " + current.parent.eX);
-			l[arrayPos].setStartY(current.parent.bEY - l[arrayPos].getLayoutBounds().getMinY());
-			System.out.println("start y of line " + current.parent.bEY);
-			l[arrayPos].setVisible(true);
+			l[arrayPos - 1].setLayoutX(-1);
+			l[arrayPos - 1].setLayoutY(-1);
+			l[arrayPos - 1].setEndX(current.eX);
+			l[arrayPos - 1].setEndY(current.tEY);
+			l[arrayPos - 1].setStartX(current.parent.eX);
+			l[arrayPos - 1].setStartY(current.parent.bEY);
+			l[arrayPos - 1].setVisible(true);
 			
 		}
 		arrayPos++;
-//		parent = current;
-		
-//		System.out.println(current.info);
 	}
-
+	
+	
 }
