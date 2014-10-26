@@ -1,8 +1,6 @@
 package controller;
 
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
@@ -12,6 +10,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Line;
+import javafx.scene.shape.Path;
 import javafx.scene.text.Text;
 
 public class Controller implements Initializable{
@@ -19,7 +19,15 @@ public class Controller implements Initializable{
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 
-	}
+		c = new Circle[] {circle1, circle2, circle3, circle4, circle5, circle6, 
+				circle7, circle8, circle9, circle10, circle11, circle12, 
+				circle13, circle14, circle15, circle16, circle17};
+		t = new Text[] {value1, value2, value3, value4, value5, value6, value7, 
+				value8, value9, value10, value11, value12, value13, value14, 
+				value15, value16, value17};
+		l = new Line[] {line1, line2, line3, line4, line5, line6, line7, line8, 
+				line9, line10, line11, line12, line13, line14, line15, line16};
+		}
 	
 	@FXML
 	private Button addButton;
@@ -97,27 +105,53 @@ public class Controller implements Initializable{
 	@FXML
 	private Text value17 = new Text();
 	
+	@FXML
+	private Line line1 = new Line();
+	@FXML
+	private Line line2 = new Line();
+	@FXML
+	private Line line3 = new Line();
+	@FXML
+	private Line line4 = new Line();
+	@FXML
+	private Line line5 = new Line();
+	@FXML
+	private Line line6 = new Line();
+	@FXML
+	private Line line7 = new Line();
+	@FXML
+	private Line line8 = new Line();
+	@FXML
+	private Line line9 = new Line();
+	@FXML
+	private Line line10 = new Line();
+	@FXML
+	private Line line11 = new Line();
+	@FXML
+	private Line line12 = new Line();
+	@FXML
+	private Line line13 = new Line();
+	@FXML
+	private Line line14 = new Line();
+	@FXML
+	private Line line15 = new Line();
+	@FXML
+	private Line line16 = new Line();
 	
+	
+
 	private Circle[] c;
 	private Text[] t;
-	
-	private void fillArray(){
-		c = new Circle[] {circle1, circle2, circle3, circle4, circle5, circle6, 
-				circle7, circle8, circle9, circle10, circle11, circle12, 
-				circle13, circle14, circle15, circle16, circle17};
-		t = new Text[] {value1, value2, value3, value4, value5, value6, value7, 
-				value8, value9, value10, value11, value12, value13, value14, 
-				value15, value16, value17};
-		}
-	
+	private Line[] l;
 	private Tree tree = new Tree();
 	private int arrayPos = 0;
+//	TreeNode parent = new TreeNode(0);
 	
 	public void addNumber(ActionEvent event){
-		fillArray();
 		String temp = numberBox.getText();
 		tree.add(Integer.parseInt(temp));
 		TreeNode current = tree.binarySearch(Integer.parseInt(temp));
+		
 		
 		c[arrayPos].setLayoutX(current.cX);
 		c[arrayPos].setLayoutY(current.cY);
@@ -126,9 +160,23 @@ public class Controller implements Initializable{
 		t[arrayPos].setText(temp);
 		c[arrayPos].setVisible(true);
 		t[arrayPos].setVisible(true);
+		if(arrayPos > 0){
+			
+			l[arrayPos].setEndX(current.eX - l[arrayPos].getLayoutBounds().getMinX());
+			System.out.println("end x of node " + current.eX);
+			l[arrayPos].setEndY(current.tEY - l[arrayPos].getLayoutBounds().getMinY());
+			System.out.println("end y of line" + current.tEY);
+			l[arrayPos].setStartX(current.parent.eX - l[arrayPos].getLayoutBounds().getMinX());
+			System.out.println("start x of line " + current.parent.eX);
+			l[arrayPos].setStartY(current.parent.bEY - l[arrayPos].getLayoutBounds().getMinY());
+			System.out.println("start y of line " + current.parent.bEY);
+			l[arrayPos].setVisible(true);
+			
+		}
 		arrayPos++;
+//		parent = current;
 		
-		System.out.println(current.info);
+//		System.out.println(current.info);
 	}
 
 }

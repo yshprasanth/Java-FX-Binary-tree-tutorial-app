@@ -8,28 +8,28 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="750.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="750.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
    <children>
       <TextField fx:id="numberBox" layoutX="109.0" layoutY="645.0" prefHeight="25.0" prefWidth="55.0" />
       <Label layoutX="14.0" layoutY="649.0" text="Type a Number" />
       <Button fx:id="addButton" layoutX="177.0" layoutY="645.0" mnemonicParsing="false" onAction="#addNumber" text="add" />
-      <Circle fx:id="circle1" fill="#5ed8ff" layoutX="375.0" layoutY="100.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
-      <Circle fx:id="circle2" fill="#5ed8ff" layoutX="277.0" layoutY="155.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
-      <Circle fx:id="circle3" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
-      <Circle fx:id="circle4" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
-      <Circle fx:id="circle5" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
-      <Circle fx:id="circle6" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
-      <Circle fx:id="circle7" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
-      <Circle fx:id="circle8" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
-      <Circle fx:id="circle9" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
-      <Circle fx:id="circle10" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
-      <Circle fx:id="circle11" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
-      <Circle fx:id="circle12" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
-      <Circle fx:id="circle13" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
-      <Circle fx:id="circle14" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
-      <Circle fx:id="circle15" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
-      <Circle fx:id="circle16" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
-      <Circle fx:id="circle17" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle1" fill="#5effa4" layoutX="375.0" layoutY="100.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle2" fill="#5ed8ff" layoutX="277.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle3" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle4" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle5" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle6" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle7" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle8" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle9" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle10" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle11" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle12" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle13" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle14" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle15" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle16" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle17" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
       <Text fx:id="value1" layoutX="364.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
       <Text fx:id="value2" layoutX="364.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
       <Text fx:id="value3" layoutX="462.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
@@ -47,5 +47,21 @@
       <Text fx:id="value15" layoutX="462.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
       <Text fx:id="value16" layoutX="462.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
       <Text fx:id="value17" layoutX="462.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Line fx:id="line1" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" visible="false" />
+      <Line fx:id="line2" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" visible="false" />
+      <Line fx:id="line3" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" visible="false" />
+      <Line fx:id="line4" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" visible="false" />
+      <Line fx:id="line5" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" visible="false" />
+      <Line fx:id="line6" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" visible="false" />
+      <Line fx:id="line7" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" visible="false" />
+      <Line fx:id="line8" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" visible="false" />
+      <Line fx:id="line9" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" visible="false" />
+      <Line fx:id="line10" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" visible="false" />
+      <Line fx:id="line11" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" visible="false" />
+      <Line fx:id="line12" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" visible="false" />
+      <Line fx:id="line13" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" visible="false" />
+      <Line fx:id="line14" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" visible="false" />
+      <Line fx:id="line15" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" visible="false" />
+      <Line fx:id="line16" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" visible="false" />
    </children>
 </AnchorPane>
