@@ -39,6 +39,12 @@ public class Controller implements Initializable{
 		l1 = new Line[] {line17, line21, line31, line41, line51, line61, line71, 
 				line81, line91, line101, line111, line121, line131, line141, 
 				line151, line161};
+		i1 = new ImageView[] {inorder1, inorder2, inorder3, inorder4, inorder5, 
+				inorder6, inorder8, inorder7};
+		i2 = new ImageView[] {inorder1, inorder5, inorder3, inorder2,inorder4, 
+				inorder6, inorder7, inorder8};
+		i3 = new ImageView[] {inorder1, inorder2, inorder4, inorder3, inorder8, 
+				inorder7, inorder6, inorder5};
 		}
 	
 	@FXML
@@ -59,6 +65,20 @@ public class Controller implements Initializable{
 	private Button next4;
 	@FXML
 	private Button next5;
+	@FXML
+	private Button next6;
+	@FXML
+	private Button next7;
+	@FXML
+	private Button next8;
+	@FXML
+	private Button next9;
+	@FXML
+	private Button inorderButton;
+	@FXML
+	private Button preorderButton;
+	@FXML
+	private Button postorderButton;
 	
 	@FXML
 	private Button startButton;
@@ -105,7 +125,7 @@ public class Controller implements Initializable{
 	value9, value10, value11, value12, value13, value14, value15, value16, value17,
 	value18, value21, value31, value41, value51, value61, value71, value81, 
 	value91, value101, value111, value121, value131, value141, value151, value161, 
-	value171;
+	value171, description7, preorderText;
 	
 	@FXML
 	private Line line1, line2, line3, line4, line5, line6, line7, line8, line9,
@@ -127,6 +147,26 @@ public class Controller implements Initializable{
 	private ImageView bst5;
 	@FXML
 	private ImageView subTree;
+	@FXML
+	private ImageView minandmax;
+	@FXML
+	private ImageView leafs;
+	@FXML
+	private ImageView inorder1;
+	@FXML
+	private ImageView inorder2;
+	@FXML
+	private ImageView inorder3;
+	@FXML
+	private ImageView inorder4;
+	@FXML
+	private ImageView inorder5;
+	@FXML
+	private ImageView inorder6;
+	@FXML
+	private ImageView inorder7;
+	@FXML
+	private ImageView inorder8;
 	
 	
 	
@@ -137,6 +177,7 @@ public class Controller implements Initializable{
 	private Line[] l, l1;
 	private Tree tree = new Tree();
 	private Tree tree1 = new Tree();
+	private ImageView[] i1, i2, i3;
 	private int arrayPos = 0;
 	private int arrayPos1 = 0;
 	
@@ -317,6 +358,128 @@ public class Controller implements Initializable{
 		subTree.setVisible(true);
 		next5.setVisible(true);
 	}
+	
+	public void next5(ActionEvent event)
+	{   description5.setVisible(false);
+	    description6.setVisible(false);
+	    subTree.setVisible(false);
+	    next5.setVisible(false);
+	    
+	    description7.setVisible(true);
+	    inorderButton.setVisible(true);
+	    inorder1.setVisible(true);
+	    next6.setVisible(true);
+	}
+	
+	int count = 0;
+	public void inorderTraversal(ActionEvent event)
+	{
+		
+		i1[count].setVisible(false);
+		
+		i1[count + 1 ].setVisible(true);
+		count++;
+		
+		if(count == 7){
+			inorderButton.setVisible(false);
+			count = 0;
+			}
+		    
+		
+			
+	}
+	
+	public void next6(ActionEvent event)
+	{
+		description7.setVisible(false);
+	    inorderButton.setVisible(false);
+	    next6.setVisible(false);
+	    i1[7].setVisible(false);
+	    
+	    preorderText.setVisible(true);
+	    preorderButton.setVisible(true);
+	    next7.setVisible(true);
+	    inorder1.setVisible(true);
+	}
+	
+	public void preorderTraversal(ActionEvent event)
+	{
+		
+		i2[count].setVisible(false);
+		
+		i2[count + 1 ].setVisible(true);
+		count++;
+		
+		if(count == 7){
+			preorderButton.setVisible(false);
+			count = 0;
+			}
+		    
+			
+	}
+	
+	public void next7()
+	{
+		preorderText.setText("Postorder Traversal");
+	    preorderButton.setVisible(false);
+	    next7.setVisible(false);
+	    inorder1.setVisible(true);
+	    inorder8.setVisible(false);
+	    next8.setVisible(true);
+	    postorderButton.setVisible(true);
+	    
+	        
+	}
+	
+	public void postorderTraversal(ActionEvent event)
+	{
+		
+		i3[count].setVisible(false);
+		
+		i3[count + 1 ].setVisible(true);
+		count++;
+		
+		if(count == 7)
+			{postorderButton.setVisible(false);
+			count = 0;
+			}
+		
+			
+	}
+	/**
+	 * goes to min/max page when clicked
+	 */
+	public void next8(ActionEvent event)
+	{
+		preorderText.setText("Minimum and Maximum");
+	    next8.setVisible(false);
+	    postorderButton.setVisible(false);
+	    description1.setText("Inorder to find the minimum value in a tree, one must look at the"
+	    		+ " left-most value. Similarly, in order to find the maximum value in a tree, one must"
+	    		+ " look at the right most value. In the tree above, the minimum is shown in red and "
+	    		+ " the maximum in orange.");
+	    description1.setVisible(true);
+	    inorder5.setVisible(false);
+	    minandmax.setVisible(true);
+	    next9.setVisible(true);
+	   
+	        
+	}
+	
+	public void next9(ActionEvent event)
+	{   inorder5.setVisible(false);
+		next8.setVisible(false);
+		preorderText.setText("Leaf Nodes");
+		preorderText.setVisible(true);
+	    description1.setText("Leaf nodes in a tree are those that do not contain any children. In the tree"
+	    		+ " above, the leaf nodes are shown in yellow");
+	    description1.setVisible(true);
+	    minandmax.setVisible(false);
+	    leafs.setVisible(true);
+	   
+	        
+	}
+	
 	
 	
 }

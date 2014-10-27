@@ -136,11 +136,103 @@
                               <Font size="54.0" />
                            </font>
                         </Text>
-                        <Button fx:id="next5" layoutX="1095.0" layoutY="595.0" mnemonicParsing="false" text="NEXT" visible="false">
-                           <font>
-                              <Font size="41.0" />
-                           </font>
-                        </Button>
+                        <Button fx:id="next5" layoutX="1110.0" layoutY="641.0" mnemonicParsing="false" onAction="#next5" text="NEXT" visible="false">
+         <font>
+            <Font size="41.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="inorder1" fitHeight="334.0" fitWidth="472.0" layoutX="410.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../inorder1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="inorder2" fitHeight="334.0" fitWidth="472.0" layoutX="410.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../inorder2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="inorder3" fitHeight="334.0" fitWidth="472.0" layoutX="410.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../inorder3.png" />
+         </image></ImageView>
+      <ImageView fx:id="inorder4" fitHeight="334.0" fitWidth="472.0" layoutX="410.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../inorder4.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="inorder5" fitHeight="334.0" fitWidth="472.0" layoutX="410.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../inorder5.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="inorder6" fitHeight="334.0" fitWidth="472.0" layoutX="410.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../inorder6.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="inorder8" fitHeight="334.0" fitWidth="472.0" layoutX="410.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../inorder8.png" />
+         </image></ImageView>
+      <ImageView fx:id="inorder7" fitHeight="334.0" fitWidth="472.0" layoutX="410.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../inorder7.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="description7" fill="#61befc" layoutX="407.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inorder Traversal" visible="false">
+         <font>
+            <Font size="53.0" />
+         </font>
+      </Text>
+      <Button fx:id="inorderButton" layoutX="573.0" layoutY="516.0" mnemonicParsing="false" onAction="#inorderTraversal" text="TRAVERSE" visible="false">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="preorderButton" layoutX="567.0" layoutY="514.0" mnemonicParsing="false" onAction="#preorderTraversal" text="TRAVERSE" visible="false">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Text fx:id="preorderText" fill="#139bd0" layoutX="443.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Preorder Traversal" visible="false">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Text>
+      <Button fx:id="next7" layoutX="940.0" layoutY="526.0" mnemonicParsing="false" onAction="#next7" text="NEXT" visible="false">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="next6" layoutX="940.0" layoutY="526.0" mnemonicParsing="false" onAction="#next6" text="NEXT" visible="false">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="next8" layoutX="940.0" layoutY="539.0" mnemonicParsing="false" onAction="#next8" text="NEXT" visible="false">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Button fx:id="postorderButton" layoutX="564.0" layoutY="507.0" mnemonicParsing="false" onAction="#postorderTraversal" text="TRAVERSE" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="minandmax" fitHeight="334.0" fitWidth="472.0" layoutX="410.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../../Desktop/minandmax.png" />
+         </image></ImageView>
+      <Button fx:id="next9" layoutX="1110.0" layoutY="612.0" mnemonicParsing="false" onAction="#next9" text="NEXT" visible="false">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="leafs" fitHeight="334.0" fitWidth="472.0" layoutX="410.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../leafs.png" />
+         </image>
+      </ImageView>
                         <Circle fx:id="circle1" fill="#5effa4" layoutX="375.0" layoutY="100.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
       <Circle fx:id="circle2" fill="#5ed8ff" layoutX="277.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
       <Circle fx:id="circle3" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
