@@ -375,7 +375,7 @@ public class Controller implements Initializable{
 	    next6.setVisible(true);
 	}
 	
-//	int count = 0;
+
 	int count = 1;
 	String order = "";
 	
@@ -384,14 +384,6 @@ public class Controller implements Initializable{
 
 		int[] numbers = new int[] {0, 1,3,6,8,10,13,14};
 
-//		i1[count].setVisible(false);
-//		
-//		i1[count + 1 ].setVisible(true);
-//		count++;
-//		if(count == 7){
-//			inorderButton.setVisible(false);
-//			count = 0;
-//			}
 		if(count == 8){
 			count = 1;
 			i1[7].setVisible(false);
@@ -406,78 +398,93 @@ public class Controller implements Initializable{
 		}
 		traverseOrder.setText(order);
 		count++;
-		
-		    
-		
-			
 	}
 	
 	public void next6(ActionEvent event)
 	{
+		for(int i = 0; i < i1.length; i++){
+			i1[i].setVisible(false);
+		}
 		description7.setVisible(false);
 	    inorderButton.setVisible(false);
 	    next6.setVisible(false);
-	    i1[7].setVisible(false);
 	    
 	    preorderText.setVisible(true);
 	    preorderButton.setVisible(true);
 	    next7.setVisible(true);
 	    inorder1.setVisible(true);
+	    traverseOrder.setText("");
+	    count = 1;
 	}
 	
 	public void preorderTraversal(ActionEvent event)
 	{
-		
-		i2[count].setVisible(false);
-		
-		i2[count + 1 ].setVisible(true);
+		int[] numbers = new int[] {0,8,3,1,6,10,14,13};
+		if(count == 8){
+			count = 1;
+			i2[7].setVisible(false);
+		}
+		i2[count - 1].setVisible(false);
+		i2[count].setVisible(true);
+		if(count == 1){
+			order = "" + numbers[count];
+		}
+		else{
+			order += ", " + numbers[count];
+		}
+		traverseOrder.setText(order);
 		count++;
-		
-		if(count == 7){
-			preorderButton.setVisible(false);
-			count = 0;
-			}
 		    
 			
 	}
 	
 	public void next7()
 	{
+		for(int i = 0; i < i2.length; i++){
+			i2[i].setVisible(false);
+		}
 		preorderText.setText("Postorder Traversal");
 	    preorderButton.setVisible(false);
 	    next7.setVisible(false);
+	    
 	    inorder1.setVisible(true);
-	    inorder8.setVisible(false);
+	    traverseOrder.setText("");
 	    next8.setVisible(true);
 	    postorderButton.setVisible(true);
+	    count = 1;
 	    
 	        
 	}
 	
 	public void postorderTraversal(ActionEvent event)
 	{
-		
-		i3[count].setVisible(false);
-		
-		i3[count + 1 ].setVisible(true);
+		int[] numbers = new int[] {0,1,6,3,13,14,10,8};
+		if(count == 8){
+			count = 1;
+			i3[7].setVisible(false);
+		}
+		i3[count - 1].setVisible(false);
+		i3[count].setVisible(true);
+		if(count == 1){
+			order = "" + numbers[count];
+		}
+		else{
+			order += ", " + numbers[count];
+		}
+		traverseOrder.setText(order);
 		count++;
-		
-		if(count == 7)
-			{postorderButton.setVisible(false);
-			count = 0;
-			}
-		
-			
 	}
+	
 	/**
 	 * goes to min/max page when clicked
 	 */
 	public void next8(ActionEvent event)
 	{
+		count = 0;
 		preorderText.setText("Minimum and Maximum");
 	    next8.setVisible(false);
 	    postorderButton.setVisible(false);
-	    description1.setText("Inorder to find the minimum value in a tree, one must look at the"
+	    description1.setText("In order to find the minimum value in a tree, one must look at the"
 	    		+ " left-most value. Similarly, in order to find the maximum value in a tree, one must"
 	    		+ " look at the right most value. In the tree above, the minimum is shown in red and "
 	    		+ " the maximum in orange.");
