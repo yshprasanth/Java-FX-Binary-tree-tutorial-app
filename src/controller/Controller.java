@@ -42,6 +42,8 @@ public class Controller implements Initializable{
 	private Button next3;
 	@FXML
 	private Button next4;
+	@FXML
+	private Button next5;
 	
 	@FXML
 	private Button startButton;
@@ -66,6 +68,10 @@ public class Controller implements Initializable{
 	private Text description3 = new Text();
 	@FXML
 	private Text description4 = new Text();
+	@FXML
+	private Text description5 = new Text();
+	@FXML
+	private Text description6 = new Text();
 	@FXML 
 	private Text depthT = new Text();
 	@FXML 
@@ -187,6 +193,9 @@ public class Controller implements Initializable{
 	private ImageView bst4;
 	@FXML
 	private ImageView bst5;
+	@FXML
+	private ImageView subTree;
+	
 	
 	
 	
@@ -292,6 +301,20 @@ public class Controller implements Initializable{
 		description4.setVisible(true);
 		next4.setVisible(true);
 		
+	}
+	
+	public void next4(ActionEvent event){
+		heightT.setVisible(false);
+		depthT.setVisible(false);
+		bst4.setVisible(false);
+		bst5.setVisible(false);
+		description4.setVisible(false);
+		next4.setVisible(false);
+		
+		description5.setVisible(true);
+		description6.setVisible(true);
+		subTree.setVisible(true);
+		next5.setVisible(true);
 	}
 	
 	

@@ -160,7 +160,27 @@
             <Font size="37.0" />
          </font>
       </Text>
-      <Button fx:id="next4" layoutX="1100.0" layoutY="631.0" mnemonicParsing="false" text="NEXT" visible="false">
+      <Button fx:id="next4" layoutX="1100.0" layoutY="631.0" mnemonicParsing="false" onAction="#next4" text="NEXT" visible="false">
+         <font>
+            <Font size="41.0" />
+         </font>
+      </Button>
+      <Text fx:id="description5" fill="#64eaff" layoutX="157.0" layoutY="597.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The right tree is said to be a Subtree of the left one. The node containing the 3 is the root of the subtree." visible="false" wrappingWidth="935.8343391418457">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="subTree" fitHeight="366.0" fitWidth="886.0" layoutX="235.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../subtree.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="description6" fill="#64eaff" layoutX="532.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subtrees" visible="false" wrappingWidth="244.03157424926758">
+         <font>
+            <Font size="54.0" />
+         </font>
+      </Text>
+      <Button fx:id="next5" layoutX="1110.0" layoutY="641.0" mnemonicParsing="false" text="NEXT" visible="false">
          <font>
             <Font size="41.0" />
          </font>
