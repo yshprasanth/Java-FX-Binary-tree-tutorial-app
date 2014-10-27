@@ -481,6 +481,8 @@ public class Controller implements Initializable{
 	public void next8(ActionEvent event)
 	{
 		count = 0;
+		traverseOrder.setText("");
+		traverseOrder.setVisible(false); //box with traverse numbers to invis
 		preorderText.setText("Minimum and Maximum");
 	    next8.setVisible(false);
 	    postorderButton.setVisible(false);
