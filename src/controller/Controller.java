@@ -11,6 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.Path;
@@ -33,9 +34,43 @@ public class Controller implements Initializable{
 	
 	@FXML
 	private Button addButton;
+	@FXML
+	private Button next1;
+	@FXML
+	private Button next2;
+	@FXML
+	private Button next3;
+	@FXML
+	private Button next4;
+	
+	@FXML
+	private Button startButton;
 	
 	@FXML
 	private TextField numberBox;
+	
+	@FXML
+	private Label numberLabel;
+	
+	@FXML
+	private Text authors = new Text();
+	@FXML
+	private Text whatisBST = new Text();
+	@FXML
+	private Text whatisnotBST = new Text();
+	@FXML 
+	private Text description1 = new Text();
+	@FXML
+	private Text description2 = new Text();
+	@FXML
+	private Text description3 = new Text();
+	@FXML
+	private Text description4 = new Text();
+	@FXML 
+	private Text depthT = new Text();
+	@FXML 
+	private Text heightT = new Text();
+	
 	
 	@FXML
 	private Circle circle1 = new Circle();
@@ -140,6 +175,20 @@ public class Controller implements Initializable{
 	@FXML
 	private Line line16 = new Line();
 	
+	@FXML
+	private ImageView logo;
+	@FXML
+	private ImageView bst1;
+	@FXML
+	private ImageView bst2;
+	@FXML
+	private ImageView bst3;
+	@FXML
+	private ImageView bst4;
+	@FXML
+	private ImageView bst5;
+	
+	
 	
 
 	private Circle[] c;
@@ -183,6 +232,66 @@ public class Controller implements Initializable{
 			
 		}
 		arrayPos++;
+	}
+	
+	public void start(ActionEvent event){
+		
+		logo.setVisible(false);
+		startButton.setVisible(false);
+		authors.setVisible(false);
+		whatisBST.setVisible(true);
+		bst1.setVisible(true);
+		description1.setVisible(true);
+		next1.setVisible(true);
+	}
+	
+	public void next1(ActionEvent event){
+		whatisBST.setVisible(false);
+		bst1.setVisible(false);
+		description1.setVisible(false);
+		next1.setVisible(false);
+		whatisnotBST.setVisible(true);
+		bst2.setVisible(true);
+		bst3.setVisible(true);
+		description2.setVisible(true);
+		next2.setVisible(true);
+		
+	}
+	
+	public void next2(ActionEvent event){
+		whatisnotBST.setVisible(false);
+		bst2.setVisible(false);
+		bst3.setVisible(false);
+		description2.setVisible(false);
+		next2.setVisible(false);
+		description3.setVisible(true);
+		addButton.setVisible(true);
+		numberBox.setVisible(true);
+		numberLabel.setVisible(true);
+		next3.setVisible(true);
+	}
+	
+	public void next3(ActionEvent event){
+		description3.setVisible(false);
+		addButton.setVisible(false);
+		numberBox.setVisible(false);
+		numberLabel.setVisible(false);
+		next3.setVisible(false);
+		for(int i = 0; i < c.length; i++){//reset circles and numbers to invis
+			c[i].setVisible(false);
+			t[i].setVisible(false);
+		}
+		for(int i = 0; i < l.length; i++){//reset lines to invis
+			l[i].setVisible(false);
+		}
+		
+		heightT.setVisible(true);
+		depthT.setVisible(true);
+		bst4.setVisible(true);
+		bst5.setVisible(true);
+		description4.setVisible(true);
+		next4.setVisible(true);
+		
 	}
 	
 	
