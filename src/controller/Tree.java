@@ -7,7 +7,7 @@ public class Tree
 {
 	
     // create instance variables
-    private TreeNode root;
+    public TreeNode root;
     private int height;
 
     /**

@@ -12,10 +12,136 @@
 
 <AnchorPane fx:id="whatisBST2" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="750.0" prefWidth="1200.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
    <children>
-      <TextField fx:id="numberBox" layoutX="598.0" layoutY="666.0" prefHeight="25.0" prefWidth="55.0" visible="false" />
-      <Label fx:id="numberLabel" layoutX="503.0" layoutY="670.0" text="Type a Number" textFill="WHITE" visible="false" />
-      <Button fx:id="addButton" layoutX="666.0" layoutY="666.0" mnemonicParsing="false" onAction="#addNumber" text="add" visible="false" />
-      <Circle fx:id="circle1" fill="#5effa4" layoutX="375.0" layoutY="100.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <TabPane prefHeight="751.0" prefWidth="1323.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab closable="false" text="Tutorial">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fx:id="logo" fitHeight="131.0" fitWidth="1321.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../coollogo_com-31712293.gif" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="authors" fill="#1595d0" layoutX="367.0" layoutY="509.0" strokeType="OUTSIDE" strokeWidth="0.0" text="By: Daniel Alvarez and Rachelle Tobkes">
+                           <font>
+                              <Font name="Arial Bold" size="31.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="startButton" layoutX="591.0" layoutY="541.0" mnemonicParsing="false" onAction="#start" text="START">
+                           <font>
+                              <Font name="Arial Black" size="20.0" />
+                           </font>
+                        </Button>
+                        <Text fx:id="whatisBST" fill="#0caff5" layoutX="260.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What is a Binary Search Tree?" visible="false" wrappingWidth="843.9777221679688">
+                           <font>
+                              <Font size="56.0" />
+                           </font>
+                        </Text>
+                        <ImageView fx:id="bst1" fitHeight="327.0" fitWidth="411.0" layoutX="416.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../../BST1.png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="description1" fill="WHITE" layoutX="164.0" layoutY="524.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Every node in a Binary Search Tree must have at most two child nodes. As you can see, every number to the left of the root (green) is less than the root. Likewise, every number to the right of the root, is greater than the root.This same property is true for every other node in the Binary Search Tree." visible="false" wrappingWidth="1021.9514350891113">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="next1" layoutX="1136.0" layoutY="606.0" mnemonicParsing="false" onAction="#next1" text="NEXT" visible="false">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="next2" layoutX="1108.0" layoutY="594.0" mnemonicParsing="false" onAction="#next2" text="NEXT" visible="false">
+                           <font>
+                              <Font size="34.0" />
+                           </font>
+                        </Button>
+                        <ImageView fx:id="bst2" fitHeight="315.0" fitWidth="341.0" layoutX="194.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../../BST2.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="bst3" fitHeight="349.0" fitWidth="348.0" layoutX="687.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../../BST3.png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="whatisnotBST" fill="#0bbeda" layoutX="223.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What is NOT a Binary Search Tree?" visible="false">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="description2" fill="WHITE" layoutX="115.0" layoutY="456.0" strokeType="OUTSIDE" strokeWidth="0.0" text="These two trees are not Binary Search Trees.  The tree on the left contains a node in an incorrect position. As you can see, the number 23 is on the left side of the root, when it really should be on the right and to the right of 14. The tree on the right hand side is also not a Binary Search Tree because it contains a floating node that is not attached to the tree." visible="false" wrappingWidth="1063.90230178833">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="numberBox" layoutX="633.0" layoutY="580.0" prefHeight="25.0" prefWidth="55.0" visible="false" />
+                        <Label fx:id="numberLabel" layoutX="509.0" layoutY="586.0" text="Type a Number" textFill="WHITE" visible="false" />
+                        <Button fx:id="addButton" layoutX="734.0" layoutY="578.0" mnemonicParsing="false" onAction="#addNumber" text="add" visible="false" />
+                        <Text fx:id="description3" fill="#2bb7ee" layoutX="131.0" layoutY="515.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Now add some numbers below to see how a Binary Search Tree is created!" visible="false">
+                           <font>
+                              <Font size="31.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="next3" layoutX="1111.0" layoutY="603.0" mnemonicParsing="false" onAction="#next3" text="NEXT" visible="false">
+                           <font>
+                              <Font size="33.0" />
+                           </font>
+                        </Button>
+                        <ImageView fx:id="bst4" fitHeight="254.0" fitWidth="353.0" layoutX="253.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../../BST4.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="bst5" fitHeight="234.0" fitWidth="352.0" layoutX="706.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../../BST5.png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="depthT" fill="#64eaff" layoutX="324.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEPTH" visible="false">
+                           <font>
+                              <Font size="46.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="heightT" fill="#64eaff" layoutX="770.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HEIGHT" visible="false" wrappingWidth="161.44227600097656">
+                           <font>
+                              <Font size="43.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="description4" fill="#64eaff" layoutX="57.0" layoutY="467.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The depth of a node can be found by counting the levels of a tree starting at zero. On the left, the depth of node 6 containing is 2 and the depth of the root is 0. Height of a tree can be found in a similar manner however, the levels begin at 1. The height of the tree on the right is 4. Nodes have depth, Trees have height." visible="false" wrappingWidth="1134.4848022460938">
+                           <font>
+                              <Font size="37.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="next4" layoutX="1108.0" layoutY="618.0" mnemonicParsing="false" onAction="#next4" text="NEXT" visible="false">
+                           <font>
+                              <Font size="41.0" />
+                           </font>
+                        </Button>
+                        <Text fx:id="description5" fill="#64eaff" layoutX="148.0" layoutY="536.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The right tree is said to be a Subtree of the left one. The node containing the 3 is the root of the subtree." visible="false" wrappingWidth="935.8343391418457">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Text>
+                        <ImageView fx:id="subTree" fitHeight="366.0" fitWidth="886.0" layoutX="228.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../../subtree.png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="description6" fill="#64eaff" layoutX="519.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subtrees" visible="false" wrappingWidth="244.03157424926758">
+                           <font>
+                              <Font size="54.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="next5" layoutX="1095.0" layoutY="595.0" mnemonicParsing="false" text="NEXT" visible="false">
+                           <font>
+                              <Font size="41.0" />
+                           </font>
+                        </Button>
+                        <Circle fx:id="circle1" fill="#5effa4" layoutX="375.0" layoutY="100.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
       <Circle fx:id="circle2" fill="#5ed8ff" layoutX="277.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
       <Circle fx:id="circle3" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
       <Circle fx:id="circle4" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
@@ -65,125 +191,78 @@
       <Line fx:id="line14" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" stroke="WHITE" visible="false" />
       <Line fx:id="line15" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" stroke="WHITE" visible="false" />
       <Line fx:id="line16" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" stroke="WHITE" visible="false" />
-      <ImageView fx:id="logo" fitHeight="131.0" fitWidth="1321.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../coollogo_com-31712293.gif" />
-         </image>
-      </ImageView>
-      <Text fx:id="authors" fill="#1595d0" layoutX="332.0" layoutY="426.0" strokeType="OUTSIDE" strokeWidth="0.0" text="By: Daniel Alvarez and Rachelle Tobkes">
-         <font>
-            <Font name="Arial Bold" size="31.0" />
-         </font>
-      </Text>
-      <Button fx:id="startButton" layoutX="600.0" layoutY="473.0" mnemonicParsing="false" onAction="#start" text="START">
-         <font>
-            <Font name="Arial Black" size="20.0" />
-         </font>
-      </Button>
-      <Text fx:id="whatisBST" fill="#0caff5" layoutX="316.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What is a Binary Search Tree?" visible="false" wrappingWidth="843.9777221679688">
-         <font>
-            <Font size="56.0" />
-         </font>
-      </Text>
-      <ImageView fx:id="bst1" fitHeight="327.0" fitWidth="411.0" layoutX="447.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true" visible="false">
-         <image>
-            <Image url="@../../BST1.png" />
-         </image>
-      </ImageView>
-      <Text fx:id="description1" fill="WHITE" layoutX="170.0" layoutY="587.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Every node in a Binary Search Tree must have at most two child nodes. As you can see, every number to the left of the root (green) is less than the root. Likewise, every number to the right of the root, is greater than the root.This same property is true for every other node in the Binary Search Tree." visible="false" wrappingWidth="1021.9514350891113">
-         <font>
-            <Font size="25.0" />
-         </font>
-      </Text>
-      <Button fx:id="next1" layoutX="1136.0" layoutY="655.0" mnemonicParsing="false" onAction="#next1" text="NEXT" visible="false">
-         <font>
-            <Font size="30.0" />
-         </font>
-      </Button>
-      <Button fx:id="next2" layoutX="1093.0" layoutY="668.0" mnemonicParsing="false" onAction="#next2" text="NEXT" visible="false">
-         <font>
-            <Font size="34.0" />
-         </font>
-      </Button>
-      <ImageView fx:id="bst2" fitHeight="315.0" fitWidth="341.0" layoutX="172.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true" visible="false">
-         <image>
-            <Image url="@../../BST2.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="bst3" fitHeight="349.0" fitWidth="348.0" layoutX="710.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true" visible="false">
-         <image>
-            <Image url="@../../BST3.png" />
-         </image>
-      </ImageView>
-      <Text fx:id="whatisnotBST" fill="#0bbeda" layoutX="223.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What is NOT a Binary Search Tree?" visible="false">
-         <font>
-            <Font size="50.0" />
-         </font>
-      </Text>
-      <Text fx:id="description2" fill="WHITE" layoutX="198.0" layoutY="542.0" strokeType="OUTSIDE" strokeWidth="0.0" text="These two trees are not Binary Search Trees.  The tree on the left contains a node in an incorrect position. As you can see, the number 23 is on the left side of the root, when it really should be on the right and to the right of 14. The tree on the right hand side is also not a Binary Search Tree because it contains a floating node that is not attached to the tree." visible="false" wrappingWidth="868.4380683898926">
-         <font>
-            <Font size="26.0" />
-         </font>
-      </Text>
-      <Text fx:id="description3" fill="#2bb7ee" layoutX="183.0" layoutY="640.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Now add some numbers below to see how a Binary Search Tree is created!" visible="false">
-         <font>
-            <Font size="31.0" />
-         </font>
-      </Text>
-      <Button fx:id="next3" layoutX="1137.0" layoutY="652.0" mnemonicParsing="false" onAction="#next3" text="NEXT" visible="false">
-         <font>
-            <Font size="33.0" />
-         </font>
-      </Button>
-      <ImageView fx:id="bst4" fitHeight="254.0" fitWidth="353.0" layoutX="177.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true" visible="false">
-         <image>
-            <Image url="@../../BST4.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="bst5" fitHeight="234.0" fitWidth="352.0" layoutX="688.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true" visible="false">
-         <image>
-            <Image url="@../../BST5.png" />
-         </image>
-      </ImageView>
-      <Text fx:id="depthT" fill="#64eaff" layoutX="251.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEPTH" visible="false">
-         <font>
-            <Font size="46.0" />
-         </font>
-      </Text>
-      <Text fx:id="heightT" fill="#64eaff" layoutX="762.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HEIGHT" visible="false" wrappingWidth="161.44227600097656">
-         <font>
-            <Font size="43.0" />
-         </font>
-      </Text>
-      <Text fx:id="description4" fill="#64eaff" layoutX="94.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The depth of a node can be found by counting the levels of a tree starting at zero. On the left, the depth of node 6 containing is 2 and the depth of the root is 0. Height of a tree can be found in a similar manner however, the levels begin at 1. The height of the tree on the right is 4. Nodes have depth, Trees have height." visible="false" wrappingWidth="1134.4848022460938">
-         <font>
-            <Font size="37.0" />
-         </font>
-      </Text>
-      <Button fx:id="next4" layoutX="1100.0" layoutY="631.0" mnemonicParsing="false" onAction="#next4" text="NEXT" visible="false">
-         <font>
-            <Font size="41.0" />
-         </font>
-      </Button>
-      <Text fx:id="description5" fill="#64eaff" layoutX="157.0" layoutY="597.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The right tree is said to be a Subtree of the left one. The node containing the 3 is the root of the subtree." visible="false" wrappingWidth="935.8343391418457">
-         <font>
-            <Font size="26.0" />
-         </font>
-      </Text>
-      <ImageView fx:id="subTree" fitHeight="366.0" fitWidth="886.0" layoutX="235.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true" visible="false">
-         <image>
-            <Image url="@../../subtree.png" />
-         </image>
-      </ImageView>
-      <Text fx:id="description6" fill="#64eaff" layoutX="532.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subtrees" visible="false" wrappingWidth="244.03157424926758">
-         <font>
-            <Font size="54.0" />
-         </font>
-      </Text>
-      <Button fx:id="next5" layoutX="1110.0" layoutY="641.0" mnemonicParsing="false" text="NEXT" visible="false">
-         <font>
-            <Font size="41.0" />
-         </font>
-      </Button>
+                        <Button fx:id="clear" layoutX="726.0" layoutY="621.0" mnemonicParsing="false" onAction="#clear" text="Clear" visible="false" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Free Mode">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="addButton1" layoutX="309.0" layoutY="572.0" mnemonicParsing="false" onAction="#addNumber1" text="add" />
+                        <Label fx:id="numberLabel1" layoutX="79.0" layoutY="577.0" text="Type a Number" textFill="WHITE" />
+                        <TextField fx:id="numberBox1" layoutX="210.0" layoutY="572.0" prefHeight="25.0" prefWidth="55.0" />
+                        <Circle fx:id="circle18" fill="#5effa4" layoutX="375.0" layoutY="100.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle21" fill="#5ed8ff" layoutX="277.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle31" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle41" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle51" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle61" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle71" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle81" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle91" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle101" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle111" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle121" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle131" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle141" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle151" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle161" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Circle fx:id="circle171" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Text fx:id="value18" layoutX="364.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="value21" layoutX="364.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="value31" layoutX="462.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="value41" layoutX="462.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="value51" layoutX="462.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="value61" layoutX="462.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="value71" layoutX="462.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="value81" layoutX="462.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="value91" layoutX="462.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="value101" layoutX="462.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="value111" layoutX="462.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="value121" layoutX="462.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="value131" layoutX="462.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="value141" layoutX="462.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="value151" layoutX="462.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="value161" layoutX="462.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="value171" layoutX="462.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Line fx:id="line17" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" stroke="WHITE" visible="false" />
+      <Line fx:id="line21" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" stroke="WHITE" visible="false" />
+      <Line fx:id="line31" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" stroke="WHITE" visible="false" />
+      <Line fx:id="line41" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" stroke="WHITE" visible="false" />
+      <Line fx:id="line51" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" stroke="WHITE" visible="false" />
+      <Line fx:id="line61" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" stroke="WHITE" visible="false" />
+      <Line fx:id="line71" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" stroke="WHITE" visible="false" />
+      <Line fx:id="line81" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" stroke="WHITE" visible="false" />
+      <Line fx:id="line91" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" stroke="WHITE" visible="false" />
+      <Line fx:id="line101" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" stroke="WHITE" visible="false" />
+      <Line fx:id="line111" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" stroke="WHITE" visible="false" />
+      <Line fx:id="line121" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" stroke="WHITE" visible="false" />
+      <Line fx:id="line131" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" stroke="WHITE" visible="false" />
+      <Line fx:id="line141" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" stroke="WHITE" visible="false" />
+      <Line fx:id="line151" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" stroke="WHITE" visible="false" />
+      <Line fx:id="line161" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" stroke="WHITE" visible="false" />
+                        <Button fx:id="clear1" layoutX="292.0" layoutY="609.0" mnemonicParsing="false" onAction="#clear1" text="Clear" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Quiz Mode">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
    </children>
 </AnchorPane>

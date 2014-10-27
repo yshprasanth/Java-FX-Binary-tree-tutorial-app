@@ -30,10 +30,25 @@ public class Controller implements Initializable{
 				value15, value16, value17};
 		l = new Line[] {line1, line2, line3, line4, line5, line6, line7, line8, 
 				line9, line10, line11, line12, line13, line14, line15, line16};
+		c1 = new Circle[] {circle18, circle21, circle31, circle41, circle51, 
+				circle61, circle71, circle81, circle91, circle101, circle111, 
+				circle121, circle131, circle141, circle151, circle161, circle171};
+		t1 = new Text[] {value18, value21, value31, value41, value51, value61, 
+				value71, value81, value91, value101, value111, value121, value131, 
+				value141, value151, value161, value171};
+		l1 = new Line[] {line17, line21, line31, line41, line51, line61, line71, 
+				line81, line91, line101, line111, line121, line131, line141, 
+				line151, line161};
 		}
 	
 	@FXML
 	private Button addButton;
+	@FXML
+	private Button addButton1;
+	@FXML
+	private Button clear;
+	@FXML
+	private Button clear1;
 	@FXML
 	private Button next1;
 	@FXML
@@ -49,13 +64,13 @@ public class Controller implements Initializable{
 	private Button startButton;
 	
 	@FXML
-	private TextField numberBox;
+	private TextField numberBox, numberBox1;
 	
 	@FXML
-	private Label numberLabel;
+	private Label numberLabel, numberLabel1;
 	
 	@FXML
-	private Text authors = new Text();
+	private Text authors;
 	@FXML
 	private Text whatisBST = new Text();
 	@FXML
@@ -79,107 +94,24 @@ public class Controller implements Initializable{
 	
 	
 	@FXML
-	private Circle circle1 = new Circle();
-	@FXML
-	private Circle circle2 = new Circle();
-	@FXML
-	private Circle circle3 = new Circle();
-	@FXML
-	private Circle circle4 = new Circle();
-	@FXML
-	private Circle circle5 = new Circle();
-	@FXML
-	private Circle circle6 = new Circle();
-	@FXML
-	private Circle circle7 = new Circle();
-	@FXML
-	private Circle circle8 = new Circle();
-	@FXML
-	private Circle circle9 = new Circle();
-	@FXML
-	private Circle circle10 = new Circle();
-	@FXML
-	private Circle circle11 = new Circle();
-	@FXML
-	private Circle circle12 = new Circle();
-	@FXML
-	private Circle circle13 = new Circle();
-	@FXML
-	private Circle circle14 = new Circle();
-	@FXML
-	private Circle circle15 = new Circle();
-	@FXML
-	private Circle circle16 = new Circle();
-	@FXML
-	private Circle circle17 = new Circle();
+	private Circle circle1, circle2, circle3, circle4, circle5, circle6, 
+	circle7, circle8, circle9, circle10, circle11, circle12, circle13, circle14,
+	circle15, circle16, circle17, circle18, circle21, circle31, circle41, circle51, 
+	circle61, circle71, circle81, circle91, circle101, circle111, circle121, circle131, 
+	circle141, circle151, circle161, circle171;
 	
 	@FXML
-	private Text value1 = new Text();
-	@FXML
-	private Text value2 = new Text();
-	@FXML
-	private Text value3 = new Text();
-	@FXML
-	private Text value4 = new Text();
-	@FXML
-	private Text value5 = new Text();
-	@FXML
-	private Text value6 = new Text();
-	@FXML
-	private Text value7 = new Text();
-	@FXML
-	private Text value8 = new Text();
-	@FXML
-	private Text value9 = new Text();
-	@FXML
-	private Text value10 = new Text();
-	@FXML
-	private Text value11 = new Text();
-	@FXML
-	private Text value12 = new Text();
-	@FXML
-	private Text value13 = new Text();
-	@FXML
-	private Text value14 = new Text();
-	@FXML
-	private Text value15 = new Text();
-	@FXML
-	private Text value16 = new Text();
-	@FXML
-	private Text value17 = new Text();
+	private Text value1, value2, value3, value4, value5, value6, value7, value8, 
+	value9, value10, value11, value12, value13, value14, value15, value16, value17,
+	value18, value21, value31, value41, value51, value61, value71, value81, 
+	value91, value101, value111, value121, value131, value141, value151, value161, 
+	value171;
 	
 	@FXML
-	private Line line1 = new Line();
-	@FXML
-	private Line line2 = new Line();
-	@FXML
-	private Line line3 = new Line();
-	@FXML
-	private Line line4 = new Line();
-	@FXML
-	private Line line5 = new Line();
-	@FXML
-	private Line line6 = new Line();
-	@FXML
-	private Line line7 = new Line();
-	@FXML
-	private Line line8 = new Line();
-	@FXML
-	private Line line9 = new Line();
-	@FXML
-	private Line line10 = new Line();
-	@FXML
-	private Line line11 = new Line();
-	@FXML
-	private Line line12 = new Line();
-	@FXML
-	private Line line13 = new Line();
-	@FXML
-	private Line line14 = new Line();
-	@FXML
-	private Line line15 = new Line();
-	@FXML
-	private Line line16 = new Line();
+	private Line line1, line2, line3, line4, line5, line6, line7, line8, line9,
+	line10, line11, line12, line13, line14, line15, line16, line17, line21, 
+	line31, line41, line51, line61, line71, line81, line91, line101, line111, 
+	line121, line131, line141, line151, line161;
 	
 	@FXML
 	private ImageView logo;
@@ -200,11 +132,13 @@ public class Controller implements Initializable{
 	
 	
 
-	private Circle[] c;
-	private Text[] t;
-	private Line[] l;
+	private Circle[] c, c1;
+	private Text[] t, t1;
+	private Line[] l, l1;
 	private Tree tree = new Tree();
+	private Tree tree1 = new Tree();
 	private int arrayPos = 0;
+	private int arrayPos1 = 0;
 	
 	public void addNumber(ActionEvent event){
 		String temp = numberBox.getText();
@@ -243,6 +177,71 @@ public class Controller implements Initializable{
 		arrayPos++;
 	}
 	
+	public void clear(ActionEvent event){
+		if(tree.root != null){
+			for(int i = 0; i < c.length; i++){
+				c[i].setVisible(false);
+				t[i].setVisible(false);
+			}
+			for(int i = 0; i < l.length; i++){
+				l[i].setVisible(false);
+			}
+			tree.root = null;
+			arrayPos = 0;
+		}
+	}
+	
+	public void addNumber1(ActionEvent event){
+		String temp = numberBox1.getText();
+		if(!tree1.contains(Integer.parseInt(temp))){
+			add1(temp);
+			
+		}
+		else{
+			JOptionPane.showMessageDialog(null, "Sorry you cannot enter the same number more than once");
+		}
+	}
+	private void add1(String temp){
+		
+		tree1.add(Integer.parseInt(temp));
+		TreeNode current = tree1.binarySearch(Integer.parseInt(temp));
+		
+		
+		c1[arrayPos1].setLayoutX(current.cX);
+		c1[arrayPos1].setLayoutY(current.cY);
+		t1[arrayPos1].setLayoutX(current.tX);
+		t1[arrayPos1].setLayoutY(current.tY);
+		t1[arrayPos1].setText(temp);
+		c1[arrayPos1].setVisible(true);
+		t1[arrayPos1].setVisible(true);
+		if(arrayPos1 > 0){
+			
+			l1[arrayPos1 - 1].setLayoutX(-1);
+			l1[arrayPos1 - 1].setLayoutY(-1);
+			l1[arrayPos1 - 1].setEndX(current.eX);
+			l1[arrayPos1 - 1].setEndY(current.tEY);
+			l1[arrayPos1 - 1].setStartX(current.parent.eX);
+			l1[arrayPos1 - 1].setStartY(current.parent.bEY);
+			l1[arrayPos1 - 1].setVisible(true);
+			
+		}
+		arrayPos1++;
+	}
+	
+	public void clear1(ActionEvent event){
+		if(tree1.root != null){
+			for(int i = 0; i < c1.length; i++){
+				c1[i].setVisible(false);
+				t1[i].setVisible(false);
+			}
+			for(int i = 0; i < l.length; i++){
+				l1[i].setVisible(false);
+			}
+			tree1.root = null;
+			arrayPos1 = 0;
+		}
+	}
+	
 	public void start(ActionEvent event){
 		
 		logo.setVisible(false);
@@ -275,6 +274,7 @@ public class Controller implements Initializable{
 		next2.setVisible(false);
 		description3.setVisible(true);
 		addButton.setVisible(true);
+		clear.setVisible(true);
 		numberBox.setVisible(true);
 		numberLabel.setVisible(true);
 		next3.setVisible(true);
@@ -283,6 +283,7 @@ public class Controller implements Initializable{
 	public void next3(ActionEvent event){
 		description3.setVisible(false);
 		addButton.setVisible(false);
+		clear.setVisible(false);
 		numberBox.setVisible(false);
 		numberLabel.setVisible(false);
 		next3.setVisible(false);
