@@ -10,6 +10,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.shape.Circle;
@@ -89,6 +90,8 @@ public class Controller implements Initializable{
 	@FXML
 	private Label numberLabel, numberLabel1;
 	
+	@FXML
+	private TextArea traverseOrder;
 	@FXML
 	private Text authors;
 	@FXML
@@ -368,22 +371,42 @@ public class Controller implements Initializable{
 	    description7.setVisible(true);
 	    inorderButton.setVisible(true);
 	    inorder1.setVisible(true);
+	    traverseOrder.setVisible(true);
 	    next6.setVisible(true);
 	}
 	
-	int count = 0;
+//	int count = 0;
+	int count = 1;
+	String order = "";
+	
 	public void inorderTraversal(ActionEvent event)
 	{
-		
-		i1[count].setVisible(false);
-		
-		i1[count + 1 ].setVisible(true);
+
+		int[] numbers = new int[] {0, 1,3,6,8,10,13,14};
+
+//		i1[count].setVisible(false);
+//		
+//		i1[count + 1 ].setVisible(true);
+//		count++;
+//		if(count == 7){
+//			inorderButton.setVisible(false);
+//			count = 0;
+//			}
+		if(count == 8){
+			count = 1;
+			i1[7].setVisible(false);
+		}
+		i1[count - 1].setVisible(false);
+		i1[count].setVisible(true);
+		if(count == 1){
+			order = "" + numbers[count];
+		}
+		else{
+			order += ", " + numbers[count];
+		}
+		traverseOrder.setText(order);
 		count++;
 		
-		if(count == 7){
-			inorderButton.setVisible(false);
-			count = 0;
-			}
 		    
 		
 			
