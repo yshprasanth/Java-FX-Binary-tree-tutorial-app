@@ -378,6 +378,56 @@ public class Tree
 			printChildRelations(temp.right);
 		}
     }
+    
+	public String preOrder(TreeNode root){
+		String s = "";
+		return preOrderHelper(s, root);
+	}
+	
+	private String preOrderHelper(String s, TreeNode root)
+	{
+		if(root != null)
+		{
+			s += (root.info + " ");
+			s += preOrder(root.left);
+			s += preOrder(root.right);
+		}
+		return s;
+	}
+    
+    public String inOrder(TreeNode root){
+		String s = "";
+		return inOrderHelper(s, root);
+	}
+	
+	private String inOrderHelper(String s, TreeNode root)
+	{
+		if(root != null)
+		{
+			s += inOrder(root.left);
+			s += (root.info + " ");
+			s += inOrder(root.right);
+		}
+		return s;
+	}
+	
+	public String postOrder(TreeNode root){
+		String s = "";
+		return postOrderHelper(s, root);
+	}
+	
+	private String postOrderHelper(String s, TreeNode root)
+	{
+		if(root != null)
+		{
+			s += postOrder(root.left);
+			s += postOrder(root.right);
+			s += (root.info + " ");
+		}
+		return s;
+	}
+	
+
 
     
     

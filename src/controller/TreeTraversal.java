@@ -1,16 +1,20 @@
 package controller;
 public class TreeTraversal
 {
-
+	public String preOrder(TreeNode root){
+		String s = "";
+		return preOrderHelper(s, root);
+	}
 	
-	public void preOrder(TreeNode root)
+	private String preOrderHelper(String s, TreeNode root)
 	{
 		if(root != null)
 		{
-			System.out.println(root.info + " ");
+			s += (root.info + " ");
 			preOrder(root.left);
 			preOrder(root.right);
 		}
+		return s;
 	}
 	
 	

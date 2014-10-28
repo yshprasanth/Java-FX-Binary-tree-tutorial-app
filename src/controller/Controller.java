@@ -5,10 +5,12 @@ import java.util.ResourceBundle;
 
 import javax.swing.JOptionPane;
 
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -46,7 +48,15 @@ public class Controller implements Initializable{
 				inorder6, inorder7, inorder8};
 		i3 = new ImageView[] {inorder1, inorder2, inorder4, inorder3, inorder8, 
 				inorder7, inorder6, inorder5};
+		travDropDown.setItems(FXCollections.observableArrayList(
+			    "PreOrder", "InOrder","PostOrder")
+			);
+		
 		}
+	@FXML
+	private ChoiceBox<String> travDropDown; //drop down for traversal choices
+	
+	
 	
 	@FXML
 	private Button addButton;
@@ -80,12 +90,13 @@ public class Controller implements Initializable{
 	private Button preorderButton;
 	@FXML
 	private Button postorderButton;
-	
 	@FXML
 	private Button startButton;
+	@FXML
+	private Button depthButton;
 	
 	@FXML
-	private TextField numberBox, numberBox1;
+	private TextField numberBox, numberBox1, depthBox, depthAns, traverseOrderText;
 	
 	@FXML
 	private Label numberLabel, numberLabel1;
@@ -114,6 +125,10 @@ public class Controller implements Initializable{
 	private Text depthT = new Text();
 	@FXML 
 	private Text heightT = new Text();
+	@FXML
+	private Text depthTextQ;
+	
+	
 	
 	
 	@FXML
@@ -512,6 +527,26 @@ public class Controller implements Initializable{
 	        
 	}
 	
+	public void getDepth(ActionEvent event){
+		int number = Integer.parseInt(depthBox.getText());
+		int depth = tree1.depth(number);
+		depthAns.setText("The depth of that node is : " + depth);
+		
+	}
+	
+	public void traverse1(ActionEvent event){
+		String s = "";
+		if(travDropDown.getValue() == "PreOrder"){
+			s = tree1.preOrder(tree1.root);
+		}
+		else if(travDropDown.getValue() == "InOrder"){
+			s = tree1.inOrder(tree1.root);
+		}
+		else{
+			s = tree1.postOrder(tree1.root);
+		}
+		traverseOrderText.setText(s);
+	}
 	
 	
 }
