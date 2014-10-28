@@ -293,12 +293,12 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Button fx:id="addButton1" layoutX="255.0" layoutY="575.0" mnemonicParsing="false" onAction="#addNumber1" text="add" />
-                        <Label fx:id="numberLabel1" layoutX="26.0" layoutY="573.0" prefHeight="29.0" prefWidth="142.0" text="Add or delete a # " textFill="WHITE">
+                        <Button fx:id="addButton1" layoutX="160.0" layoutY="576.0" mnemonicParsing="false" onAction="#addNumber1" text="Add" />
+                        <Label fx:id="numberLabel1" layoutX="76.0" layoutY="534.0" prefHeight="29.0" prefWidth="165.0" text="Add/Delete Number" textFill="WHITE">
                            <font>
                               <Font size="17.0" />
                            </font></Label>
-                        <TextField fx:id="numberBox1" layoutX="182.0" layoutY="575.0" prefHeight="25.0" prefWidth="55.0" />
+                        <TextField fx:id="numberBox1" layoutX="83.0" layoutY="576.0" prefHeight="26.0" prefWidth="65.0" />
                         <Circle fx:id="circle18" fill="#5effa4" layoutX="375.0" layoutY="100.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
       <Circle fx:id="circle21" fill="#5ed8ff" layoutX="277.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
       <Circle fx:id="circle31" fill="#5ed8ff" layoutX="473.0" layoutY="155.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
@@ -349,18 +349,29 @@
       <Line fx:id="line141" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" stroke="WHITE" visible="false" />
       <Line fx:id="line151" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" stroke="WHITE" visible="false" />
       <Line fx:id="line161" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" stroke="WHITE" visible="false" />
-                        <Button fx:id="clear1" layoutX="184.0" layoutY="615.0" mnemonicParsing="false" onAction="#clear1" text="Clear" />
-                        <Text fx:id="depthTextQ" fill="WHITE" layoutX="406.0" layoutY="564.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What node would you like to know the depth for?" wrappingWidth="275.1024475097656">
+                        <Button fx:id="clear1" layoutX="88.0" layoutY="617.0" mnemonicParsing="false" onAction="#clear1" text="Clear" />
+                        <Text fx:id="depthorHeight" fill="WHITE" layoutX="265.0" layoutY="542.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Which node would you like to know the depth of?" wrappingWidth="188.01605224609375">
                            <font>
                               <Font size="17.0" />
                            </font>
                         </Text>
-                        <TextField fx:id="depthBox" layoutX="424.0" layoutY="602.0" prefHeight="26.0" prefWidth="76.0" />
-                        <Button fx:id="depthButton" layoutX="531.0" layoutY="602.0" mnemonicParsing="false" onAction="#getDepth" text="Get Depth!" />
-                        <TextField fx:id="depthAns" editable="false" layoutX="419.0" layoutY="637.0" prefHeight="26.0" prefWidth="229.0" />
-                        <Button fx:id="traverseButton1" layoutX="902.0" layoutY="633.0" mnemonicParsing="false" onAction="#traverse1" text="Traverse" />
-                        <ChoiceBox fx:id="travDropDown" layoutX="729.0" layoutY="634.0" prefWidth="150.0" />
-                        <TextField fx:id="traverseOrderText" editable="false" layoutX="704.0" layoutY="586.0" prefHeight="26.0" prefWidth="266.0" />
+                        <TextField fx:id="depthBox" layoutX="261.0" layoutY="589.0" prefHeight="26.0" prefWidth="76.0" />
+                        <Button fx:id="depthButton" layoutX="354.0" layoutY="589.0" mnemonicParsing="false" onAction="#getDepth" text="Get Depth!" />
+                        <TextField fx:id="answer" editable="false" layoutX="278.0" layoutY="673.0" prefHeight="26.0" prefWidth="706.0" />
+                        <Button fx:id="resultButton" layoutX="699.0" layoutY="586.0" mnemonicParsing="false" onAction="#getResult" text="Get!" />
+                        <ChoiceBox fx:id="dropDown" layoutX="524.0" layoutY="588.0" prefWidth="150.0" />
+                        <Button fx:id="deleteButton" layoutX="152.0" layoutY="618.0" mnemonicParsing="false" onAction="#deleteNode" text="Delete" />
+                        <Text fx:id="or" fill="WHITE" layoutX="286.0" layoutY="639.0" strokeType="OUTSIDE" strokeWidth="0.0" text="or...">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="heightButton" layoutX="334.0" layoutY="620.0" mnemonicParsing="false" onAction="#getHeight" text="Get Tree Height!" />
+                        <Text fx:id="selectDD" fill="WHITE" layoutX="494.0" layoutY="555.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Make a selection from the drop down..." wrappingWidth="304.4068031311035">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
                      </children></AnchorPane>
             </content>
           </Tab>

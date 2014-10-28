@@ -48,13 +48,14 @@ public class Controller implements Initializable{
 				inorder6, inorder7, inorder8};
 		i3 = new ImageView[] {inorder1, inorder2, inorder4, inorder3, inorder8, 
 				inorder7, inorder6, inorder5};
-		travDropDown.setItems(FXCollections.observableArrayList(
-			    "PreOrder", "InOrder","PostOrder")
+		dropDown.setItems(FXCollections.observableArrayList(
+			    "PreOrder", "InOrder","PostOrder", "Get Min", "Get Max", "Leafs",
+			    "Parent-Child")
 			);
 		
 		}
 	@FXML
-	private ChoiceBox<String> travDropDown; //drop down for traversal choices
+	private ChoiceBox<String> dropDown; //drop down for traversal choices
 	
 	
 	
@@ -62,6 +63,8 @@ public class Controller implements Initializable{
 	private Button addButton;
 	@FXML
 	private Button addButton1;
+	@FXML
+	private Button deleteButton;
 	@FXML
 	private Button clear;
 	@FXML
@@ -94,9 +97,13 @@ public class Controller implements Initializable{
 	private Button startButton;
 	@FXML
 	private Button depthButton;
+	@FXML
+	private Button heightButton;
+	@FXML
+	private Button resultButton;
 	
 	@FXML
-	private TextField numberBox, numberBox1, depthBox, depthAns, traverseOrderText;
+	private TextField numberBox, numberBox1, depthBox, answer;
 	
 	@FXML
 	private Label numberLabel, numberLabel1;
@@ -127,7 +134,12 @@ public class Controller implements Initializable{
 	private Text heightT = new Text();
 	@FXML
 	private Text depthTextQ;
-	
+	@FXML
+	private Text or;
+	@FXML
+	private Text selectDD;
+	@FXML
+	private Text depthorHeight;
 	
 	
 	
@@ -248,6 +260,7 @@ public class Controller implements Initializable{
 			tree.root = null;
 			arrayPos = 0;
 		}
+		answer.setText("");
 	}
 	
 	public void addNumber1(ActionEvent event){
@@ -528,24 +541,59 @@ public class Controller implements Initializable{
 	}
 	
 	public void getDepth(ActionEvent event){
-		int number = Integer.parseInt(depthBox.getText());
-		int depth = tree1.depth(number);
-		depthAns.setText("The depth of that node is : " + depth);
+		if(tree1.root != null){
+			int number = Integer.parseInt(depthBox.getText());
+			int depth = tree1.depth(number);
+			answer.setText("The depth of that node is : " + depth);
+		}else{
+			answer.setText("Sorry, your tree is empty, please add some nodes first.");
+		}
+		
 		
 	}
 	
-	public void traverse1(ActionEvent event){
-		String s = "";
-		if(travDropDown.getValue() == "PreOrder"){
-			s = tree1.preOrder(tree1.root);
+	public void getHeight(ActionEvent event){
+		if(tree1.root == null){
+			int height = tree1.height();
+			answer.setText("The height of your tree is : " + height);
+		}else{
+			answer.setText("Sorry, your tree is empty, please add some nodes first.");
 		}
-		else if(travDropDown.getValue() == "InOrder"){
-			s = tree1.inOrder(tree1.root);
+		
+	}
+	
+	public void getResult(ActionEvent event){
+		if(tree1.root != null){
+			String s = "";
+			answer.setText(s);
+			if (dropDown.getValue() == "PreOrder") {
+				s = "The PreOrder traversal for your tree is: "
+						+ tree1.preOrder(tree1.root);
+			} else if (dropDown.getValue() == "InOrder") {
+				s = "The InOrder traversal for your tree is: "
+						+ tree1.inOrder(tree1.root);
+			} else if (dropDown.getValue() == "PostOrder") {
+				s = "The PostOrder traversal for your tree is: "
+						+ tree1.postOrder(tree1.root);
+			} else if (dropDown.getValue() == "Get Min") {
+				s = "The minimum value in your tree is: " + tree1.getMin();
+			} else if (dropDown.getValue() == "Get Max") {
+				s = "The maximum value in your tree is: " + tree1.getMax();
+			} else if (dropDown.getValue() == "Leafs") {
+				s = "The leafs of your tree are: " + tree1.getLeafs(tree1.root);
+			} else if (dropDown.getValue() == "Parent-Child") {
+				s = tree1.printChildRelations(tree1.root);
+			}
+			answer.setText(s);
 		}
 		else{
-			s = tree1.postOrder(tree1.root);
+			answer.setText("Sorry, your tree is empty, please add some nodes first.");
 		}
-		traverseOrderText.setText(s);
+		
+	}
+	
+	public void deleteNode(ActionEvent event){
+		
 	}
 	
 	

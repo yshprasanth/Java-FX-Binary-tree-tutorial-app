@@ -210,10 +210,9 @@ public class Tree
     public int getMin() 
     {
         TreeNode temp = root;
-        
         while (temp.left != null) 
         {
-            temp = temp.right;
+            temp = temp.left;
         }
 
         return temp.info;
@@ -320,63 +319,55 @@ public class Tree
 
     }
 
-    /**
-     * Determines if a certain value is a leaf 
-     * @param value the value to be determined
-     * @return true or false
-     */
-    public boolean isLeaf(int value) 
-    {
-        // find the node
-        TreeNode node = binarySearch(value);
-        return node.isLeaf();
-    }
+
 
     /**
      * Helper method to print the leaves in a tree
      */
-    public void printLeafs() 
+    public String getLeafs(TreeNode root) 
     {
-        printLeafs(root);
+    	String s = "";
+        return getLeafs(s, root);
     }
 
     /**
-     * Prints the leafs that are in a tree
+     * Returns the leafs that are in a tree
      * @param root the root of the tree
      */
-    public void printLeafs(TreeNode root) 
+    public String getLeafs(String s, TreeNode root) 
     {
         if (root != null) 
         {
-            printLeafs(root.left);
+            s += getLeafs(root.left);
             if (root.isLeaf())  // if node is a leaf
             {   
-                System.out.print(root.info + " ");
+                s += root.info + " ";
             }
-
-            printLeafs(root.right);
+            s += getLeafs(root.right);
         }
+        return s;
 
     }
     
-    
-    
-    public void printChildRelations()
+    public String printChildRelations(TreeNode root)
     {
-        printChildRelations(root);
+    	String s = "";
+        return printChildRelations(s, root);
     }
    
-    public void printChildRelations(TreeNode r)
+    public String printChildRelations(String s, TreeNode root)
     {
-       TreeNode temp = r;
-       
-       if(temp != null)
-		{
-			printChildRelations(temp.left);
-                       if(temp != root)
-			System.out.println(temp.info + " is a child of " + temp.parent.info);
-			printChildRelations(temp.right);
-		}
+    	if (root != null) 
+        {
+            s += printChildRelations(root.left);
+            if (root.parent != null)  // if node is a leaf
+            {   
+                s += root.info + " is the child of " + root.parent.info + ", ";
+            }
+            s += printChildRelations(root.right);
+        }
+        return s;
+
     }
     
 	public String preOrder(TreeNode root){
