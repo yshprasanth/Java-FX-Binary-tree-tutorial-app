@@ -160,8 +160,8 @@ public class Tree
      */
     public int height() 
     {
+    	height = 0;
         height(root);
-        
         height = height + 1;
         
         return height;
@@ -279,10 +279,10 @@ public class Tree
 
 
    /**
-    * Prints the path to a node
+    * Returns the path to a node
     * @param value the value whose path we want
     */
-    public void printPath(int value)
+    public String getPath(int value)
     {
         // find the node
         TreeNode node = binarySearch(value);
@@ -291,12 +291,12 @@ public class Tree
 
         if (!contains(value)) // value doesnt exist
         {
-            return;
+            return "Sorry that value is not in the tree.";
         }
 
         if (root == null) // empty tree
         {
-            return;
+            return "";
         }
 
         TreeNode current = root;
@@ -305,17 +305,18 @@ public class Tree
         {
             if (value < current.info) 
             {
-                s = s + current.info + " ";
+                s += current.info + " --> ";
                 current = current.left;
             } 
             else 
             {
-                s = s + current.info + " ";
+                s += current.info + " --> ";
                 current = current.right;
             }
         }
 
-        System.out.println("The path is " + s + current.info);
+        s += current.info;
+        return s;
 
     }
 

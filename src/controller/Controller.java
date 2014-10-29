@@ -1,6 +1,7 @@
 package controller;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 import javax.swing.JOptionPane;
@@ -14,6 +15,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TitledPane;
 import javafx.scene.image.ImageView;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
@@ -56,7 +58,7 @@ public class Controller implements Initializable{
 		}
 	@FXML
 	private ChoiceBox<String> dropDown; //drop down for traversal choices
-	
+
 	
 	
 	@FXML
@@ -88,6 +90,16 @@ public class Controller implements Initializable{
 	@FXML
 	private Button next9;
 	@FXML
+	private Button next10;
+	@FXML
+	private Button next11;
+	@FXML
+	private Button next12;
+	@FXML
+	private Button next13;
+	@FXML
+	private Button restart;
+	@FXML
 	private Button inorderButton;
 	@FXML
 	private Button preorderButton;
@@ -101,9 +113,36 @@ public class Controller implements Initializable{
 	private Button heightButton;
 	@FXML
 	private Button resultButton;
+	@FXML
+	private Button pathButton;
+	@FXML
+	private Button q1Button;
+	@FXML
+	private Button q2Button;
+	@FXML
+	private Button q3Button;
+	@FXML
+	private Button q4Button;
+	@FXML
+	private Button q5Button;
+	@FXML
+	private Button q6Button;
+	@FXML
+	private Button q7Button;
+	@FXML
+	private Button q8Button;
+	@FXML
+	private Button q9Button;
+	@FXML
+	private Button q10Button;
+	@FXML
+	private Button reset;
+	
+	
 	
 	@FXML
-	private TextField numberBox, numberBox1, depthBox, answer;
+	private TextField numberBox, numberBox1, depthBox, answer, pathBox, q1Ans,
+			q2Ans, q3Ans, q4Ans, q5Ans, q6Ans, q7Ans, q8Ans, q9Ans, q10Ans;
 	
 	@FXML
 	private Label numberLabel, numberLabel1;
@@ -140,6 +179,36 @@ public class Controller implements Initializable{
 	private Text selectDD;
 	@FXML
 	private Text depthorHeight;
+	@FXML
+	private Text pathText;
+	@FXML 
+	private Text Balanced;
+	@FXML 
+	private Text Unbalanced;
+	@FXML 
+	private Text insText;
+	@FXML 
+	private Text q1Text;
+	@FXML 
+	private Text q2Text;
+	@FXML 
+	private Text q3Text;
+	@FXML 
+	private Text q4Text;
+	@FXML 
+	private Text q5Text;
+	@FXML 
+	private Text q6Text;
+	@FXML 
+	private Text q7Text;
+	@FXML 
+	private Text q8Text;
+	@FXML 
+	private Text q9Text;
+	@FXML 
+	private Text q10Text;
+	@FXML 
+	private Text quizText;
 	
 	
 	
@@ -197,11 +266,25 @@ public class Controller implements Initializable{
 	private ImageView inorder7;
 	@FXML
 	private ImageView inorder8;
+	@FXML
+	private ImageView path;
+	@FXML
+	private ImageView unbalancedTree;
+	@FXML
+	private ImageView balancedTree;
+	@FXML
+	private ImageView delete;
+	@FXML
+	private ImageView quizTree;
+	@FXML
+	private ImageView xMark;
+	@FXML
+	private ImageView checkMark;
 	
 	
 	
 	
-
+	private ArrayList<Integer> ints = new ArrayList<Integer>();// temp storage for added tree ints
 	private Circle[] c, c1;
 	private Text[] t, t1;
 	private Line[] l, l1;
@@ -263,27 +346,28 @@ public class Controller implements Initializable{
 		answer.setText("");
 	}
 	
-	public void addNumber1(ActionEvent event){
-		String temp = numberBox1.getText();
-		if(!tree1.contains(Integer.parseInt(temp))){
+	public void addNumber1(ActionEvent event){//freemode add function
+		int temp = Integer.parseInt(numberBox1.getText());
+		if(!tree1.contains(temp)){
 			add1(temp);
+			ints.add(temp);
 			
 		}
 		else{
 			JOptionPane.showMessageDialog(null, "Sorry you cannot enter the same number more than once");
 		}
 	}
-	private void add1(String temp){
+	private void add1(int temp){
 		
-		tree1.add(Integer.parseInt(temp));
-		TreeNode current = tree1.binarySearch(Integer.parseInt(temp));
+		tree1.add(temp);
+		TreeNode current = tree1.binarySearch(temp);
 		
 		
 		c1[arrayPos1].setLayoutX(current.cX);
 		c1[arrayPos1].setLayoutY(current.cY);
 		t1[arrayPos1].setLayoutX(current.tX);
 		t1[arrayPos1].setLayoutY(current.tY);
-		t1[arrayPos1].setText(temp);
+		t1[arrayPos1].setText(temp + "");
 		c1[arrayPos1].setVisible(true);
 		t1[arrayPos1].setVisible(true);
 		if(arrayPos1 > 0){
@@ -300,7 +384,7 @@ public class Controller implements Initializable{
 		arrayPos1++;
 	}
 	
-	public void clear1(ActionEvent event){
+	public void clear1(ActionEvent event){//freemode clear function
 		if(tree1.root != null){
 			for(int i = 0; i < c1.length; i++){
 				c1[i].setVisible(false);
@@ -312,6 +396,7 @@ public class Controller implements Initializable{
 			tree1.root = null;
 			arrayPos1 = 0;
 		}
+		ints.clear();
 	}
 	
 	public void start(ActionEvent event){
@@ -508,6 +593,9 @@ public class Controller implements Initializable{
 	 */
 	public void next8(ActionEvent event)
 	{
+		for(int i = 0; i < i3.length; i++){
+			i3[i].setVisible(false);
+		}
 		count = 0;
 		traverseOrder.setText("");
 		traverseOrder.setVisible(false); //box with traverse numbers to invis
@@ -527,7 +615,7 @@ public class Controller implements Initializable{
 	}
 	
 	public void next9(ActionEvent event)
-	{   inorder5.setVisible(false);
+	{   inorder1.setVisible(false);
 		next8.setVisible(false);
 		preorderText.setText("Leaf Nodes");
 		preorderText.setVisible(true);
@@ -536,8 +624,90 @@ public class Controller implements Initializable{
 	    description1.setVisible(true);
 	    minandmax.setVisible(false);
 	    leafs.setVisible(true);
-	   
-	        
+	    next9.setVisible(false);
+	    next10.setVisible(true);
+	           
+	}
+	
+	public void next10(ActionEvent event)
+	{
+		preorderText.setText("Paths");
+		description1.setText("Every node has a path that you need to follow in order to arrive at"
+				+ " it. Follow the red arrows to see the path of"
+				+ " the node containing 4. It has a path of 8, 3, 6, 4");
+		minandmax.setVisible(false);
+		next10.setVisible(false);
+		path.setVisible(true);
+		next9.setVisible(false);
+		leafs.setVisible(false);
+		next11.setVisible(true);
+	}
+	
+	public void next11(ActionEvent event)
+	{
+		path.setVisible(false);
+		path.setVisible(false);
+		preorderText.setText("Child and Parent Relationships");
+		inorder1.setVisible(true);
+		description1.setText("Every node except the root has a parent node. Above, the root is the parent "
+				+ "of 3 and 10, and 3 and 10 are its children. Both 3 and 10 are also parent nodes"
+				+ " and contain their own children. The node containting 10 is the parent of the node containing 14, "
+				+ " and the node containing 14 is a parent of the node 13.");
+		next11.setVisible(false);
+		next12.setVisible(true);
+		
+	}
+	public void next12(ActionEvent event)
+	{
+		preorderText.setText("Unbalanced VS Balanced Trees");
+		inorder1.setVisible(false);
+		description1.setText("An unbalanced Binary Search Tree is one where a leaf is much"
+				+ " farther away from the root than any other leaf. For example, on the left, the leaf "
+				+ "containing 13 is much farther away from the root than the leaf containing 3. A balanced"
+				+ " Binary Search Tree is shown on the right where no leaf is farther away from the root than any other leaf.");
+		
+		unbalancedTree.setVisible(true);
+		balancedTree.setVisible(true);
+		Balanced.setVisible(true);
+		Unbalanced.setVisible(true);
+		next12.setVisible(false);
+		next13.setVisible(true);
+	}
+	
+	public void next13(ActionEvent event)
+	{
+		next13.setVisible(false);
+		delete.setVisible(true);
+		preorderText.setText("Deleting a Node from a Tree");
+		unbalancedTree.setVisible(false);
+		balancedTree.setVisible(false);
+		Balanced.setVisible(false);
+		Unbalanced.setVisible(false);
+		restart.setVisible(true);
+		description1.setText("To delete a node from a tree, there are 3 cases: deleting a leaf node by simply"
+				+ " removing that node, deleting a node with one child by replacing it with its child, or "
+				+ " deleteing a node that has two children by replcaing it with the smallest element "
+				+ " in the right subtree or the largest element in the left subtree. For example, above we remove"
+				+ " the node containing 3 by replacing it with the only element in its right subtree (6) which is "
+				+ " considered the smallest."); 
+				
+	}
+	public void restart()
+	{
+		bst1.setVisible(true);
+		restart.setVisible(false);
+		delete.setVisible(false);
+		next1.setVisible(true);
+		whatisBST.setVisible(true);
+		preorderText.setVisible(false);
+		description1.setText("Every node in a Binary Search Tree must have at most two child nodes. As you can see, "
+				+ "every number to the left of the root (green) is less than the root. Likewise, every number "
+				+ "to the right of the root, is greater than the root.This same property is true for every other node"
+				+ " in the Binary Search Tree.");
+		count = 1;
+		order = "";
+		preorderText.setText("Preorder Traversal");
+		
 	}
 	
 	public void getDepth(ActionEvent event){
@@ -553,7 +723,7 @@ public class Controller implements Initializable{
 	}
 	
 	public void getHeight(ActionEvent event){
-		if(tree1.root == null){
+		if(tree1.root != null){
 			int height = tree1.height();
 			answer.setText("The height of your tree is : " + height);
 		}else{
@@ -592,9 +762,346 @@ public class Controller implements Initializable{
 		
 	}
 	
+	public void getPath(ActionEvent event){
+		int number = Integer.parseInt(pathBox.getText());
+		if(tree1.contains(number)){
+			answer.setText("The path to your number is: " + tree1.getPath(number));
+		}
+		else{
+			answer.setText("Sorry, the number you entered is not in your tree.");
+		}
+	}
+	
 	public void deleteNode(ActionEvent event){
 		
+		boolean isDigit = true;
+		String boxText = numberBox1.getText();
+		for(int i = 0; i < boxText.length(); i++){//make sure number was entered
+			if(!Character.isDigit((boxText.charAt(i)))){
+				isDigit = false;
+			}
+		}
+		if(isDigit){
+			int del = Integer.parseInt(numberBox1.getText());//get number in box
+			if(tree1.contains(del)){//if number in box, execute delete code
+				int index = 0;
+				for (int i = 0; i < ints.size(); i++) {//obtain index of number in del box
+					if (ints.get(i) == del) {
+						index = i;
+					}
+				}
+				ints.remove(index);// remove int from arraylist
+				if (tree1.root != null) {// clear previous tree
+					for (int i = 0; i < c1.length; i++) {
+						c1[i].setVisible(false);
+						t1[i].setVisible(false);
+					}
+					for (int i = 0; i < l.length; i++) {
+						l1[i].setVisible(false);
+					}
+					tree1.root = null;
+					arrayPos1 = 0;
+				}
+				for (int i = 0; i < ints.size(); i++) {//recreate tree without deleted node
+					add1(ints.get(i));
+				}
+			}
+		}
+		else{
+			answer.setText("Sorry, only numbers are allowed.");
+		}
 	}
+	
+	int totalCount = 0;
+	int[] wrongCount = new int[] {0,0,0,0,0,0,0,0,0,0};
+	public void q1Answer(ActionEvent event){
+		
+		if(q1Ans.getText().equalsIgnoreCase("t")){
+			xMark.setVisible(false);
+			checkMark.setVisible(true);
+			q1Button.setVisible(false);
+			totalCount++;
+			quizText.setText(totalCount + "/10");
+		}
+		else{
+			checkMark.setVisible(false);
+			xMark.setVisible(true);
+			wrongCount[0]++;
+		}
+		if(wrongCount[0] == 3){
+			q1Text.setText("Sorry the correct answer was: T");
+			q1Button.setVisible(false);
+			clearMarks();
+		}
+	}
+	
+	public void q2Answer(ActionEvent event){
+		
+		if(q2Ans.getText().equals("2")){
+			xMark.setVisible(false);
+			checkMark.setVisible(true);
+			q2Button.setVisible(false);
+			totalCount++;
+			quizText.setText(totalCount + "/10");
+		}
+		else{
+			checkMark.setVisible(false);
+			xMark.setVisible(true);
+			wrongCount[1]++;
+		}
+		if(wrongCount[1] == 3){
+			q2Text.setText("Sorry the correct answer was: 2");
+			q2Button.setVisible(false);
+			clearMarks();
+		}
+	}
+	
+	public void q3Answer(ActionEvent event){
+		
+		if(q3Ans.getText().equals("3")){
+			xMark.setVisible(false);
+			checkMark.setVisible(true);
+			q3Button.setVisible(false);
+			totalCount++;
+			quizText.setText(totalCount + "/10");
+		}
+		else{
+			checkMark.setVisible(false);
+			xMark.setVisible(true);
+			wrongCount[2]++;
+		}
+		if(wrongCount[2] == 3){
+			q3Text.setText("Sorry the correct answer was: 3");
+			q3Button.setVisible(false);
+			clearMarks();
+		}
+	}
+	
+	public void q4Answer(ActionEvent event){
+		
+		if(q4Ans.getText().equals("10 16 25") || q4Ans.getText().equals("10 25 16")){
+			xMark.setVisible(false);
+			checkMark.setVisible(true);
+			q4Button.setVisible(false);
+			totalCount++;
+			quizText.setText(totalCount + "/10");
+		}
+		else{
+			checkMark.setVisible(false);
+			xMark.setVisible(true);
+			wrongCount[3]++;
+		}
+		if(wrongCount[3] == 3){
+			q4Text.setText("Sorry the correct answer was: 10 16 25");
+			q4Button.setVisible(false);
+			clearMarks();
+		}
+	}
+	
+	public void q5Answer(ActionEvent event){
+		
+		if(q5Ans.getText().equals("8 12 16 25")){
+			xMark.setVisible(false);
+			checkMark.setVisible(true);
+			q5Button.setVisible(false);
+			totalCount++;
+			quizText.setText(totalCount + "/10");
+		}
+		else{
+			checkMark.setVisible(false);
+			xMark.setVisible(true);
+			wrongCount[4]++;
+		}
+		if(wrongCount[4] == 3){
+			q5Text.setText("Sorry the correct answer was: 8 12 16 25");
+			q5Button.setVisible(false);
+			clearMarks();
+		}
+	}
+	
+	public void q6Answer(ActionEvent event){
+		
+		if(q6Ans.getText().equals("8 10 12 15 16 20 25")){
+			xMark.setVisible(false);
+			checkMark.setVisible(true);
+			q6Button.setVisible(false);
+			totalCount++;
+			quizText.setText(totalCount + "/10");
+		}
+		else{
+			checkMark.setVisible(false);
+			xMark.setVisible(true);
+			wrongCount[5]++;
+		}
+		if(wrongCount[5] == 3){
+			q6Text.setText("Sorry the correct answer was: 8 10 12 15 16 20 25");
+			q6Button.setVisible(false);
+			clearMarks();
+		}
+	}
+	
+	public void q7Answer(ActionEvent event){
+		
+		if(q7Ans.getText().equals("8 12 10 16 25 20 15")){
+			xMark.setVisible(false);
+			checkMark.setVisible(true);
+			q7Button.setVisible(false);
+			totalCount++;
+			quizText.setText(totalCount + "/10");
+		}
+		else{
+			checkMark.setVisible(false);
+			xMark.setVisible(true);
+			wrongCount[6]++;
+		}
+		if(wrongCount[6] == 3){
+			q7Text.setText("Sorry the correct answer was: 8 12 10 16 25 20 15");
+			q7Button.setVisible(false);
+			clearMarks();
+		}
+	}
+	
+	public void q8Answer(ActionEvent event){
+		
+		if(q8Ans.getText().equals("15 10 8 12 20 16 25")){
+			xMark.setVisible(false);
+			checkMark.setVisible(true);
+			q8Button.setVisible(false);
+			totalCount++;
+			quizText.setText(totalCount + "/10");
+		}
+		else{
+			checkMark.setVisible(false);
+			xMark.setVisible(true);
+			wrongCount[7]++;
+		}
+		if(wrongCount[7] == 3){
+			q8Text.setText("Sorry the correct answer was: 15 10 8 12 20 16 25");
+			q8Button.setVisible(false);
+			clearMarks();
+		}
+	}
+	
+	public void q9Answer(ActionEvent event){
+		
+		if(q9Ans.getText().equals("15 20 25")){
+			xMark.setVisible(false);
+			checkMark.setVisible(true);
+			q9Button.setVisible(false);
+			totalCount++;
+			quizText.setText(totalCount + "/10");
+		}
+		else{
+			checkMark.setVisible(false);
+			xMark.setVisible(true);
+			wrongCount[8]++;
+		}
+		if(wrongCount[8] == 3){
+			q9Text.setText("Sorry the correct answer was: 15 20 25");
+			q9Button.setVisible(false);
+			clearMarks();
+		}
+	}
+	
+	public void q10Answer(ActionEvent event){
+		
+		if(q10Ans.getText().equals("8 25")){
+			xMark.setVisible(false);
+			checkMark.setVisible(true);
+			q10Button.setVisible(false);
+			totalCount++;
+			quizText.setText(totalCount + "/10");
+		}
+		else{
+			checkMark.setVisible(false);
+			xMark.setVisible(true);
+			wrongCount[9]++;
+		}
+		if(wrongCount[9] == 3){
+			q10Text.setText("Sorry the correct answer was: 8 25");
+			q10Button.setVisible(false);
+			clearMarks();
+		}
+	}
+	
+	
+	
+	public void resetTest(ActionEvent event){
+		q1Ans.setVisible(true);
+		q1Button.setVisible(true);
+		q1Ans.setText("");
+		q1Text.setText("Is this a binary search tree? Enter T or F");
+		
+		q2Ans.setVisible(true);
+		q2Button.setVisible(true);
+		q2Ans.setText("");
+		q2Text.setText("What is the depth of the node containing 16?");
+
+		q3Ans.setVisible(true);
+		q3Button.setVisible(true);
+		q3Ans.setText("");
+		q3Text.setText("What is the height of the tree?");
+		
+		q4Ans.setVisible(true);
+		q4Button.setVisible(true);
+		q4Ans.setText("");
+		q4Text.setText("Which node is the parent of the node containing 12?"
+				+ " Which are the children of the node containing 20?"
+				+ " (Enter three numbers seperated by spaces)");
+
+		q5Ans.setVisible(true);
+		q5Button.setVisible(true);
+		q5Ans.setText("");
+		q5Text.setText("Which nodes are leaf nodes? (Enter from left to right seperated by spaces)");
+
+		q6Ans.setVisible(true);
+		q6Button.setVisible(true);
+		q6Ans.setText("");
+		q6Text.setText("What is the inorder traversal of the tree? (Enter numbers seperated by spaces)");
+
+		q7Ans.setVisible(true);
+		q7Button.setVisible(true);
+		q7Ans.setText("");
+		q7Text.setText("What is the postorder traversal of the tree? (Enter numbers seperated by spaces)");
+
+		
+		q8Ans.setVisible(true);
+		q8Button.setVisible(true);
+		q8Ans.setText("");
+		q8Text.setText("What is the preorder traversal of the tree? (Enter numbers seperated by spaces)");
+
+
+		q9Ans.setVisible(true);
+		q9Button.setVisible(true);
+		q9Ans.setText("");
+		q9Text.setText("What is the path of the node containing 25? (Enter numbers seperated by spaces)");
+
+
+		q10Ans.setVisible(true);
+		q10Button.setVisible(true);
+		q10Ans.setText("");
+		q10Text.setText("What are the minimum and maximum of the tree? (Enter numbers seperated by spaces)");
+
+		
+		clearMarks();
+		quizText.setText("");
+		totalCount = 0;
+		
+		for(int i = 0; i < wrongCount.length; i++){//reset wrong answer counter
+			wrongCount[i] = 0;
+		}
+
+		
+	}
+	
+	private void clearMarks(){//clear marks
+		xMark.setVisible(false);
+		checkMark.setVisible(false);
+	}
+	
+	
+	
+	
 	
 	
 }
