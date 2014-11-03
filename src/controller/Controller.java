@@ -470,14 +470,20 @@ public class Controller implements Initializable {
 		numberBox.setVisible(false);
 		numberLabel.setVisible(false);
 		next3.setVisible(false);
-		for (int i = 0; i < c.length; i++) {// reset circles and numbers to
-											// invis
-			c[i].setVisible(false);
-			t[i].setVisible(false);
-		}
-		for (int i = 0; i < l.length; i++) {// reset lines to invis
-			l[i].setVisible(false);
-		}
+		// if tree isn't empty
+		if (tree.root != null) {
+			// make circles and text invisible
+			for (int i = 0; i < c.length; i++) {
+				c[i].setVisible(false);
+				t[i].setVisible(false);
+			}
+			// make lines invisible
+			for (int i = 0; i < l.length; i++) {
+				l[i].setVisible(false);
+			}
+			// set root to null
+			tree.root = null;
+			arrayPos = 0; // set to 0
 
 		heightT.setVisible(true);
 		depthT.setVisible(true);
