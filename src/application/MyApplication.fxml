@@ -20,7 +20,7 @@
                      <children>
                         <ImageView fx:id="logo" fitHeight="131.0" fitWidth="1321.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../coollogo_com-31712293.gif" />
+                              <Image url="@../images/coollogo_com-31712293.gif" />
                            </image>
                         </ImageView>
                         <Text fx:id="authors" fill="#1595d0" layoutX="367.0" layoutY="509.0" strokeType="OUTSIDE" strokeWidth="0.0" text="By: Daniel Alvarez and Rachelle Tobkes">
@@ -40,7 +40,7 @@
                         </Text>
                         <ImageView fx:id="bst1" fitHeight="327.0" fitWidth="411.0" layoutX="416.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true" visible="false">
                            <image>
-                              <Image url="@../../BST1.png" />
+                              <Image url="@../images/BST1.png" />
                            </image>
                         </ImageView>
                         <Text fx:id="description1" fill="WHITE" layoutX="164.0" layoutY="524.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Every node in a Binary Search Tree must have at most two child nodes. As you can see, every number to the left of the root (green) is less than the root. Likewise, every number to the right of the root, is greater than the root.This same property is true for every other node in the Binary Search Tree." visible="false" wrappingWidth="1021.9514350891113">
@@ -60,12 +60,12 @@
                         </Button>
                         <ImageView fx:id="bst2" fitHeight="315.0" fitWidth="341.0" layoutX="194.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true" visible="false">
                            <image>
-                              <Image url="@../../BST2.png" />
+                              <Image url="@../images/BST2.png" />
                            </image>
                         </ImageView>
                         <ImageView fx:id="bst3" fitHeight="349.0" fitWidth="348.0" layoutX="687.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true" visible="false">
                            <image>
-                              <Image url="@../../BST3.png" />
+                              <Image url="@../images/BST3.png" />
                            </image>
                         </ImageView>
                         <Text fx:id="whatisnotBST" fill="#0bbeda" layoutX="223.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What is NOT a Binary Search Tree?" visible="false">
@@ -93,12 +93,12 @@
                         </Button>
                         <ImageView fx:id="bst4" fitHeight="254.0" fitWidth="353.0" layoutX="253.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true" visible="false">
                            <image>
-                              <Image url="@../../BST4.png" />
+                              <Image url="@../images/BST4.png" />
                            </image>
                         </ImageView>
                         <ImageView fx:id="bst5" fitHeight="234.0" fitWidth="352.0" layoutX="706.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true" visible="false">
                            <image>
-                              <Image url="@../../BST5.png" />
+                              <Image url="@../images/BST5.png" />
                            </image>
                         </ImageView>
                         <Text fx:id="depthT" fill="#64eaff" layoutX="324.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEPTH" visible="false">
@@ -128,7 +128,7 @@
                         </Text>
                         <ImageView fx:id="subTree" fitHeight="366.0" fitWidth="886.0" layoutX="228.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true" visible="false">
                            <image>
-                              <Image url="@../../subtree.png" />
+                              <Image url="@../images/subtree.png" />
                            </image>
                         </ImageView>
                         <Text fx:id="description6" fill="#64eaff" layoutX="519.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subtrees" visible="false" wrappingWidth="244.03157424926758">
@@ -143,40 +143,40 @@
       </Button>
       <ImageView fx:id="inorder1" fitHeight="334.0" fitWidth="472.0" layoutX="410.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
-            <Image url="@../../inorder1.png" />
+            <Image url="@../images/inorder1.png" />
          </image>
       </ImageView>
       <ImageView fx:id="inorder2" fitHeight="334.0" fitWidth="472.0" layoutX="410.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
-            <Image url="@../../inorder2.png" />
+            <Image url="@../images/inorder2.png" />
          </image>
       </ImageView>
       <ImageView fx:id="inorder3" fitHeight="334.0" fitWidth="472.0" layoutX="410.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
-            <Image url="@../../inorder3.png" />
+            <Image url="@../images/inorder3.png" />
          </image></ImageView>
       <ImageView fx:id="inorder4" fitHeight="334.0" fitWidth="472.0" layoutX="410.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
-            <Image url="@../../inorder4.png" />
+            <Image url="@../images/inorder4.png" />
          </image>
       </ImageView>
       <ImageView fx:id="inorder5" fitHeight="334.0" fitWidth="472.0" layoutX="410.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
-            <Image url="@../../inorder5.png" />
+            <Image url="@../images/inorder5.png" />
          </image>
       </ImageView>
       <ImageView fx:id="inorder6" fitHeight="334.0" fitWidth="472.0" layoutX="410.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
-            <Image url="@../../inorder6.png" />
+            <Image url="@../images/inorder6.png" />
          </image>
       </ImageView>
       <ImageView fx:id="inorder8" fitHeight="334.0" fitWidth="472.0" layoutX="410.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
-            <Image url="@../../inorder8.png" />
+            <Image url="@../images/inorder8.png" />
          </image></ImageView>
       <ImageView fx:id="inorder7" fitHeight="334.0" fitWidth="472.0" layoutX="410.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
-            <Image url="@../../inorder7.png" />
+            <Image url="@../images/inorder7.png" />
          </image>
       </ImageView>
       <Text fx:id="description7" fill="#61befc" layoutX="407.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inorder Traversal" visible="false">
@@ -221,7 +221,7 @@
       </Button>
       <ImageView fx:id="minandmax" fitHeight="334.0" fitWidth="472.0" layoutX="410.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
-            <Image url="@../../minandmax.png" />
+            <Image url="@../images/minandmax.png" />
          </image></ImageView>
       <Button fx:id="next9" layoutX="1136.0" layoutY="606.0" mnemonicParsing="false" onAction="#next9" text="NEXT" visible="false">
          <font>
@@ -230,7 +230,7 @@
       </Button>
       <ImageView fx:id="leafs" fitHeight="334.0" fitWidth="472.0" layoutX="410.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
-            <Image url="@../../leafs.png" />
+            <Image url="@../images/leafs.png" />
          </image>
       </ImageView>
                         <Circle fx:id="circle1" fill="#5effa4" layoutX="375.0" layoutY="100.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
@@ -292,7 +292,7 @@
                         </Button>
                         <ImageView fx:id="path" fitHeight="334.0" fitWidth="472.0" layoutX="410.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true" visible="false">
                            <image>
-                              <Image url="@../../path.png" />
+                              <Image url="@../images/path.png" />
                            </image></ImageView>
                         <Button fx:id="next11" layoutX="1136.0" layoutY="606.0" mnemonicParsing="false" onAction="#next11" text="NEXT" visible="false">
                            <font>
@@ -310,7 +310,7 @@
                         </Text>
                         <ImageView fx:id="unbalancedTree" fitHeight="276.0" fitWidth="291.0" layoutX="376.0" layoutY="224.0" pickOnBounds="true" preserveRatio="true" visible="false">
                            <image>
-                              <Image url="@../../unbalanced.png" />
+                              <Image url="@../images/unbalanced.png" />
                            </image>
                         </ImageView>
                         <Text fx:id="Balanced" fill="#07e7d4" layoutX="859.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Balanced" visible="false">
@@ -320,7 +320,7 @@
                         </Text>
                         <ImageView fx:id="balancedTree" fitHeight="276.0" fitWidth="291.0" layoutX="785.0" layoutY="224.0" pickOnBounds="true" preserveRatio="true" visible="false">
                            <image>
-                              <Image url="@../../balanced.png" />
+                              <Image url="@../images/balanced.png" />
                            </image>
                         </ImageView>
                         <Button fx:id="restart" layoutX="1123.0" layoutY="622.0" mnemonicParsing="false" onAction="#restart" text="RESTART" visible="false">
@@ -329,7 +329,7 @@
                            </font></Button>
                         <ImageView fx:id="delete" fitHeight="367.0" fitWidth="704.0" layoutX="326.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true" visible="false">
                            <image>
-                              <Image url="@../../delete.png" />
+                              <Image url="@../images/delete.png" />
                            </image>
                         </ImageView>
                         <Button fx:id="next13" layoutX="1136.0" layoutY="606.0" mnemonicParsing="false" onAction="#next13" text="NEXT" visible="false">
@@ -424,14 +424,14 @@
                               <Font size="17.0" />
                            </font>
                         </Text>
-                        <Text fx:id="pathText" fill="WHITE" layoutX="824.0" layoutY="492.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type a number to find its path or get it as a subtree" wrappingWidth="129.9699249267578">
+                        <Text fx:id="pathText" fill="WHITE" layoutX="839.0" layoutY="513.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type a number to find its path or get it as a subtree" wrappingWidth="340.9699249267578">
                            <font>
                               <Font size="17.0" />
                            </font>
                         </Text>
-                        <TextField fx:id="pathBox" layoutX="809.0" layoutY="577.0" prefHeight="26.0" prefWidth="59.0" />
-                        <Button fx:id="pathButton" layoutX="889.0" layoutY="574.0" mnemonicParsing="false" onAction="#getPath" text="Get Path!" />
-                        <Button fx:id="subtreeButton" layoutX="967.0" layoutY="573.0" mnemonicParsing="false" onAction="#getSubtree" text="Get Subtree!" />
+                        <TextField fx:id="pathBox" layoutX="868.0" layoutY="550.0" prefHeight="26.0" prefWidth="59.0" />
+                        <Button fx:id="pathButton" layoutX="943.0" layoutY="550.0" mnemonicParsing="false" onAction="#getPath" text="Get Path!" />
+                        <Button fx:id="subtreeButton" layoutX="1034.0" layoutY="550.0" mnemonicParsing="false" onAction="#getSubtree" text="Get Subtree!" />
                      </children></AnchorPane>
             </content>
           </Tab>
@@ -585,7 +585,7 @@
                         </Accordion>
                         <ImageView fx:id="quizTree" fitHeight="254.0" fitWidth="380.0" layoutX="51.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../quiz1.png" />
+                              <Image url="@../images/quiz1.png" />
                            </image>
                         </ImageView>
                         <Text fx:id="insText" fill="#02abf5" layoutX="75.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Use this Tree to answer the following questions." wrappingWidth="308.61025619506836">
@@ -600,12 +600,12 @@
                         </Text>
                         <ImageView fitHeight="222.0" fitWidth="356.0" layoutX="910.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true" visible="false" fx:id="xMark">
                            <image>
-                              <Image url="@../../xmark.png" />
+                              <Image url="@../images/xmark.png" />
                            </image>
                         </ImageView>
                         <ImageView fx:id="checkMark" fitHeight="247.0" fitWidth="332.0" layoutX="872.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true" visible="false">
                            <image>
-                              <Image url="@../../checkmark.png" />
+                              <Image url="@../images/checkmark.png" />
                            </image>
                         </ImageView>
                         <Button fx:id="reset" layoutX="570.0" layoutY="254.0" mnemonicParsing="false" onAction="#resetTest" text="Reset Test" />

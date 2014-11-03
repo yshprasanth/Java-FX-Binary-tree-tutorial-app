@@ -10,8 +10,7 @@ public class Tree {
 
 	// create instance variables
 	public TreeNode root;  
-	private int height;     
-	private int count;
+	private int height;
 
 	/**
 	 * Creates an empty tree with the root being null and a height of 0.

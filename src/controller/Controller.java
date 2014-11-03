@@ -74,8 +74,8 @@ public class Controller implements Initializable {
 
 	}
 
-	private AudioClip wrong = new AudioClip("http://www.moviewavs.com/0093058674/MP3S/Movies/Napoleon_Dynamite/dang.mp3");
-	private AudioClip right = new AudioClip("http://www.moviewavs.com/0093058674/MP3S/Movies/Napoleon_Dynamite/sweet.mp3");
+	private AudioClip wrong = new AudioClip("http://free.mp3songurls.com/1400615.mp3");
+	private AudioClip right = new AudioClip("http://free.mp3songurls.com/1400616.mp3");
 	private AudioClip add = new AudioClip("http://www.pachd.com/a/button/button1.wav");
 	private AudioClip deleteSound = new AudioClip("http://www.pachd.com/a/button/button2.wav");
 	private AudioClip select = new AudioClip("http://www.pachd.com/a/button/button20.wav");
