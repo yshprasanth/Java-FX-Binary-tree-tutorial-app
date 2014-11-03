@@ -14,7 +14,7 @@
    <children>
       <TabPane prefHeight="751.0" prefWidth="1323.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab closable="false" text="Tutorial">
+          <Tab closable="false" text="Tutorial Mode">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -53,9 +53,9 @@
                               <Font size="30.0" />
                            </font>
                         </Button>
-                        <Button fx:id="next2" layoutX="1108.0" layoutY="594.0" mnemonicParsing="false" onAction="#next2" text="NEXT" visible="false">
+                        <Button fx:id="next2" layoutX="1136.0" layoutY="606.0" mnemonicParsing="false" onAction="#next2" text="NEXT" visible="false">
                            <font>
-                              <Font size="34.0" />
+                              <Font size="30.0" />
                            </font>
                         </Button>
                         <ImageView fx:id="bst2" fitHeight="315.0" fitWidth="341.0" layoutX="194.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true" visible="false">
@@ -73,22 +73,22 @@
                               <Font size="50.0" />
                            </font>
                         </Text>
-                        <Text fx:id="description2" fill="WHITE" layoutX="115.0" layoutY="456.0" strokeType="OUTSIDE" strokeWidth="0.0" text="These two trees are not Binary Search Trees.  The tree on the left contains a node in an incorrect position. As you can see, the number 23 is on the left side of the root, when it really should be on the right and to the right of 14. The tree on the right hand side is also not a Binary Search Tree because it contains a floating node that is not attached to the tree." visible="false" wrappingWidth="1063.90230178833">
+                        <Text fx:id="description2" fill="WHITE" layoutX="164.0" layoutY="524.0" strokeType="OUTSIDE" strokeWidth="0.0" text="These two trees are not Binary Search Trees.  The tree on the left contains a node in an incorrect position. As you can see, the number 23 is on the left side of the root, when it really should be on the right and to the right of 14. The tree on the right hand side is also not a Binary Search Tree because it contains a floating node that is not attached to the tree." visible="false" wrappingWidth="1063.90230178833">
                            <font>
-                              <Font size="26.0" />
+                              <Font size="25.0" />
                            </font>
                         </Text>
                         <TextField fx:id="numberBox" layoutX="633.0" layoutY="580.0" prefHeight="25.0" prefWidth="55.0" visible="false" />
                         <Label fx:id="numberLabel" layoutX="509.0" layoutY="586.0" text="Type a Number" textFill="WHITE" visible="false" />
                         <Button fx:id="addButton" layoutX="734.0" layoutY="578.0" mnemonicParsing="false" onAction="#addNumber" text="add" visible="false" />
-                        <Text fx:id="description3" fill="#2bb7ee" layoutX="131.0" layoutY="515.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Now add some numbers below to see how a Binary Search Tree is created!" visible="false">
+                        <Text fx:id="description3" fill="#2bb7ee" layoutX="164.0" layoutY="524.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Now add some numbers below to see how a Binary Search Tree is created!" textAlignment="CENTER" visible="false">
                            <font>
-                              <Font size="31.0" />
+                              <Font size="25.0" />
                            </font>
                         </Text>
-                        <Button fx:id="next3" layoutX="1111.0" layoutY="603.0" mnemonicParsing="false" onAction="#next3" text="NEXT" visible="false">
+                        <Button fx:id="next3" layoutX="1136.0" layoutY="606.0" mnemonicParsing="false" onAction="#next3" text="NEXT" visible="false">
                            <font>
-                              <Font size="33.0" />
+                              <Font size="30.0" />
                            </font>
                         </Button>
                         <ImageView fx:id="bst4" fitHeight="254.0" fitWidth="353.0" layoutX="253.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true" visible="false">
@@ -111,14 +111,14 @@
                               <Font size="43.0" />
                            </font>
                         </Text>
-                        <Text fx:id="description4" fill="#64eaff" layoutX="57.0" layoutY="467.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The depth of a node can be found by counting the levels of a tree starting at zero. On the left, the depth of node 6 containing is 2 and the depth of the root is 0. Height of a tree can be found in a similar manner however, the levels begin at 1. The height of the tree on the right is 4. Nodes have depth, Trees have height." visible="false" wrappingWidth="1134.4848022460938">
+                        <Text fx:id="description4" fill="#64eaff" layoutX="164.0" layoutY="524.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The depth of a node can be found by counting the levels of a tree starting at zero. On the left, the depth of node containing 6 is 2 and the depth of the root is 0. Height of a tree can be found in a similar manner however, the levels begin at 1. The height of the tree on the right is 4. Nodes have depth, Trees have height." visible="false" wrappingWidth="1134.4848022460938">
                            <font>
-                              <Font size="37.0" />
+                              <Font size="25.0" />
                            </font>
                         </Text>
-                        <Button fx:id="next4" layoutX="1108.0" layoutY="618.0" mnemonicParsing="false" onAction="#next4" text="NEXT" visible="false">
+                        <Button fx:id="next4" layoutX="1136.0" layoutY="606.0" mnemonicParsing="false" onAction="#next4" text="NEXT" visible="false">
                            <font>
-                              <Font size="41.0" />
+                              <Font size="30.0" />
                            </font>
                         </Button>
                         <Text fx:id="description5" fill="#64eaff" layoutX="148.0" layoutY="536.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The right tree is said to be a Subtree of the left one. The node containing the 3 is the root of the subtree." visible="false" wrappingWidth="935.8343391418457">
@@ -136,9 +136,9 @@
                               <Font size="54.0" />
                            </font>
                         </Text>
-                        <Button fx:id="next5" layoutX="1074.0" layoutY="582.0" mnemonicParsing="false" onAction="#next5" text="NEXT" visible="false">
+                        <Button fx:id="next5" layoutX="1136.0" layoutY="606.0" mnemonicParsing="false" onAction="#next5" text="NEXT" visible="false">
          <font>
-            <Font size="41.0" />
+            <Font size="30.0" />
          </font>
       </Button>
       <ImageView fx:id="inorder1" fitHeight="334.0" fitWidth="472.0" layoutX="410.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true" visible="false">
@@ -184,48 +184,48 @@
             <Font size="53.0" />
          </font>
       </Text>
-      <Button fx:id="inorderButton" layoutX="573.0" layoutY="501.0" mnemonicParsing="false" onAction="#inorderTraversal" prefHeight="54.0" prefWidth="143.0" text="TRAVERSE" visible="false">
+      <Button fx:id="inorderButton" layoutX="570.0" layoutY="501.0" mnemonicParsing="false" onAction="#inorderTraversal" prefHeight="54.0" prefWidth="143.0" text="TRAVERSE" visible="false">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button fx:id="preorderButton" layoutX="567.0" layoutY="501.0" mnemonicParsing="false" onAction="#preorderTraversal" prefHeight="57.0" prefWidth="144.0" text="TRAVERSE" visible="false">
+      <Button fx:id="preorderButton" layoutX="570.0" layoutY="501.0" mnemonicParsing="false" onAction="#preorderTraversal" prefHeight="54.0" prefWidth="143.0" text="TRAVERSE" visible="false">
          <font>
-            <Font size="22.0" />
+            <Font size="20.0" />
          </font>
       </Button>
-      <Text fx:id="preorderText" fill="#139bd0" layoutX="443.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Preorder Traversal" visible="false">
+      <Text fx:id="preorderText" fill="#139bd0" layoutX="443.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Preorder Traversal" textAlignment="CENTER" visible="false">
          <font>
             <Font size="40.0" />
          </font>
       </Text>
-      <Button fx:id="next7" layoutX="1109.0" layoutY="596.0" mnemonicParsing="false" onAction="#next7" text="NEXT" visible="false">
+      <Button fx:id="next7" layoutX="1136.0" layoutY="606.0" mnemonicParsing="false" onAction="#next7" text="NEXT" visible="false">
          <font>
-            <Font size="23.0" />
+            <Font size="30.0" />
          </font>
       </Button>
-      <Button fx:id="next6" layoutX="1091.0" layoutY="591.0" mnemonicParsing="false" onAction="#next6" text="NEXT" visible="false">
+      <Button fx:id="next6" layoutX="1136.0" layoutY="606.0" mnemonicParsing="false" onAction="#next6" text="NEXT" visible="false">
          <font>
-            <Font size="23.0" />
+            <Font size="30.0" />
          </font>
       </Button>
-      <Button fx:id="next8" layoutX="1111.0" layoutY="596.0" mnemonicParsing="false" onAction="#next8" text="NEXT" visible="false">
+      <Button fx:id="next8" layoutX="1136.0" layoutY="606.0" mnemonicParsing="false" onAction="#next8" text="NEXT" visible="false">
          <font>
-            <Font size="22.0" />
+            <Font size="30.0" />
          </font>
       </Button>
-      <Button fx:id="postorderButton" layoutX="564.0" layoutY="507.0" mnemonicParsing="false" onAction="#postorderTraversal" prefHeight="54.0" prefWidth="151.0" text="TRAVERSE" visible="false">
+      <Button fx:id="postorderButton" layoutX="570.0" layoutY="501.0" mnemonicParsing="false" onAction="#postorderTraversal" prefHeight="54.0" prefWidth="143.0" text="TRAVERSE" visible="false">
          <font>
-            <Font size="18.0" />
+            <Font size="20.0" />
          </font>
       </Button>
       <ImageView fx:id="minandmax" fitHeight="334.0" fitWidth="472.0" layoutX="410.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@../../minandmax.png" />
          </image></ImageView>
-      <Button fx:id="next9" layoutX="1111.0" layoutY="610.0" mnemonicParsing="false" onAction="#next9" text="NEXT" visible="false">
+      <Button fx:id="next9" layoutX="1136.0" layoutY="606.0" mnemonicParsing="false" onAction="#next9" text="NEXT" visible="false">
          <font>
-            <Font size="22.0" />
+            <Font size="30.0" />
          </font>
       </Button>
       <ImageView fx:id="leafs" fitHeight="334.0" fitWidth="472.0" layoutX="410.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true" visible="false">
@@ -285,22 +285,22 @@
       <Line fx:id="line16" endX="100.0" layoutX="198.0" layoutY="170.0" startX="-100.0" stroke="WHITE" visible="false" />
                         <Button fx:id="clear" layoutX="726.0" layoutY="621.0" mnemonicParsing="false" onAction="#clear" text="Clear" visible="false" />
                         <TextArea fx:id="traverseOrder" editable="false" layoutX="522.0" layoutY="567.0" prefHeight="38.0" prefWidth="238.0" visible="false" />
-                        <Button fx:id="next10" layoutX="1109.0" layoutY="605.0" mnemonicParsing="false" onAction="#next10" prefHeight="66.0" prefWidth="139.0" text="NEXT" visible="false">
+                        <Button fx:id="next10" layoutX="1136.0" layoutY="606.0" mnemonicParsing="false" onAction="#next10" prefHeight="66.0" prefWidth="139.0" text="NEXT" visible="false">
                            <font>
-                              <Font size="23.0" />
+                              <Font size="30.0" />
                            </font>
                         </Button>
                         <ImageView fx:id="path" fitHeight="334.0" fitWidth="472.0" layoutX="410.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true" visible="false">
                            <image>
                               <Image url="@../../path.png" />
                            </image></ImageView>
-                        <Button fx:id="next11" layoutX="1122.0" layoutY="609.0" mnemonicParsing="false" onAction="#next11" text="NEXT" visible="false">
+                        <Button fx:id="next11" layoutX="1136.0" layoutY="606.0" mnemonicParsing="false" onAction="#next11" text="NEXT" visible="false">
                            <font>
-                              <Font size="27.0" />
+                              <Font size="30.0" />
                            </font></Button>
-                        <Button fx:id="next12" layoutX="1124.0" layoutY="610.0" mnemonicParsing="false" onAction="#next12" text="NEXT" visible="false">
+                        <Button fx:id="next12" layoutX="1136.0" layoutY="606.0" mnemonicParsing="false" onAction="#next12" text="NEXT" visible="false">
                            <font>
-                              <Font size="26.0" />
+                              <Font size="30.0" />
                            </font>
                         </Button>
                         <Text fx:id="Unbalanced" fill="#07e7d4" layoutX="415.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unbalanced" visible="false">
@@ -323,7 +323,7 @@
                               <Image url="@../../balanced.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="restart" layoutX="1135.0" layoutY="632.0" mnemonicParsing="false" onAction="#restart" text="RESTART" visible="false">
+                        <Button fx:id="restart" layoutX="1201.0" layoutY="653.0" mnemonicParsing="false" onAction="#restart" text="RESTART" visible="false">
                            <font>
                               <Font size="18.0" />
                            </font></Button>
@@ -332,9 +332,9 @@
                               <Image url="@../../delete.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="next13" layoutX="1154.0" layoutY="619.0" mnemonicParsing="false" onAction="#next13" text="NEXT" visible="false">
+                        <Button fx:id="next13" layoutX="1136.0" layoutY="606.0" mnemonicParsing="false" onAction="#next13" text="NEXT" visible="false">
                            <font>
-                              <Font size="22.0" />
+                              <Font size="30.0" />
                            </font>
                         </Button>
                      </children>
@@ -424,13 +424,14 @@
                               <Font size="17.0" />
                            </font>
                         </Text>
-                        <Text fx:id="pathText" fill="WHITE" layoutX="861.0" layoutY="506.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type a number to find its path" wrappingWidth="129.9699249267578">
+                        <Text fx:id="pathText" fill="WHITE" layoutX="824.0" layoutY="492.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type a number to find its path or get it as a subtree" wrappingWidth="129.9699249267578">
                            <font>
                               <Font size="17.0" />
                            </font>
                         </Text>
-                        <TextField fx:id="pathBox" layoutX="810.0" layoutY="550.0" prefHeight="26.0" prefWidth="59.0" />
-                        <Button fx:id="pathButton" layoutX="897.0" layoutY="547.0" mnemonicParsing="false" onAction="#getPath" text="Get Path!" />
+                        <TextField fx:id="pathBox" layoutX="809.0" layoutY="577.0" prefHeight="26.0" prefWidth="59.0" />
+                        <Button fx:id="pathButton" layoutX="889.0" layoutY="574.0" mnemonicParsing="false" onAction="#getPath" text="Get Path!" />
+                        <Button fx:id="subtreeButton" layoutX="967.0" layoutY="573.0" mnemonicParsing="false" onAction="#getSubtree" text="Get Subtree!" />
                      </children></AnchorPane>
             </content>
           </Tab>
@@ -458,7 +459,7 @@
                               <content>
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
-                                          <Text fx:id="q2Text" layoutX="43.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What is the depth of the node containing 16?" wrappingWidth="385.4392967224121">
+                                          <Text fx:id="q2Text" layoutX="43.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What is the depth of the node containing B?" wrappingWidth="385.4392967224121">
                                              <font>
                                                 <Font size="18.0" />
                                              </font>
@@ -486,7 +487,7 @@
                                 <content>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
-                                          <Text fx:id="q4Text" layoutX="49.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Which node is the parent of the node containing 12? Which are the children of the node containing 20? (Enter three numbers seperated by spaces)" wrappingWidth="644.8686027526855">
+                                          <Text fx:id="q4Text" layoutX="49.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Which node is the parent of the node containing R? Which are the children of the node containing E (Enter three letters seperated by spaces)" wrappingWidth="644.8686027526855">
                                              <font>
                                                 <Font size="18.0" />
                                              </font>
@@ -514,7 +515,7 @@
                                 <content>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
-                                          <Text fx:id="q6Text" layoutX="48.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What is the inorder traversal of the tree? (Enter numbers seperated by spaces)" wrappingWidth="514.6829261779785">
+                                          <Text fx:id="q6Text" layoutX="48.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What is the inorder traversal of the tree? (Enter letters seperated by spaces)" wrappingWidth="514.6829261779785">
                                              <font>
                                                 <Font size="18.0" />
                                              </font>
@@ -530,7 +531,7 @@
                                        <children>
                                           <Button fx:id="q7Button" layoutX="344.0" layoutY="65.0" mnemonicParsing="false" onAction="#q7Answer" text="Answer" />
                                           <TextField fx:id="q7Ans" layoutX="63.0" layoutY="65.0" prefHeight="26.0" prefWidth="271.0" />
-                                          <Text fx:id="q7Text" layoutX="54.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What is the postorder traversal of the tree? (Enter numbers seperated by spaces)" wrappingWidth="514.6829261779785">
+                                          <Text fx:id="q7Text" layoutX="54.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What is the postorder traversal of the tree? (Enter letters seperated by spaces)" wrappingWidth="514.6829261779785">
                                              <font>
                                                 <Font size="18.0" />
                                              </font>
@@ -544,7 +545,7 @@
                                        <children>
                                           <Button fx:id="q8Button" layoutX="312.0" layoutY="72.0" mnemonicParsing="false" onAction="#q8Answer" text="Answer" />
                                           <TextField fx:id="q8Ans" layoutX="31.0" layoutY="72.0" prefHeight="26.0" prefWidth="271.0" />
-                                          <Text fx:id="q8Text" layoutX="31.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What is the preorder traversal of the tree? (Enter numbers seperated by spaces)" wrappingWidth="514.6829261779785">
+                                          <Text fx:id="q8Text" layoutX="31.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What is the preorder traversal of the tree? (Enter letters seperated by spaces)" wrappingWidth="514.6829261779785">
                                              <font>
                                                 <Font size="18.0" />
                                              </font>
@@ -558,7 +559,7 @@
                                        <children>
                                           <Button fx:id="q9Button" layoutX="320.0" layoutY="69.0" mnemonicParsing="false" onAction="#q9Answer" text="Answer" />
                                           <TextField fx:id="q9Ans" layoutX="32.0" layoutY="69.0" prefHeight="26.0" prefWidth="271.0" />
-                                          <Text fx:id="q9Text" layoutX="32.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What is the path of the node containing 25? (Enter numbers seperated by spaces)" wrappingWidth="514.6829261779785">
+                                          <Text fx:id="q9Text" layoutX="32.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What is the path of the node containing D? (Enter letters seperated by spaces)" wrappingWidth="514.6829261779785">
                                              <font>
                                                 <Font size="18.0" />
                                              </font>
@@ -572,7 +573,7 @@
                                        <children>
                                           <Button fx:id="q10Button" layoutX="169.0" layoutY="65.0" mnemonicParsing="false" onAction="#q10Answer" text="Answer" />
                                           <TextField fx:id="q10Ans" layoutX="43.0" layoutY="65.0" prefHeight="26.0" prefWidth="111.0" />
-                                          <Text fx:id="q10Text" layoutX="44.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What are the minimum and maximum of the tree? (Enter numbers seperated by spaces)" wrappingWidth="514.6829261779785">
+                                          <Text fx:id="q10Text" layoutX="44.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What are the minimum and maximum of the tree? (Enter letters seperated by spaces)" wrappingWidth="514.6829261779785">
                                              <font>
                                                 <Font size="18.0" />
                                              </font>
@@ -582,7 +583,7 @@
                               </TitledPane>
                           </panes>
                         </Accordion>
-                        <ImageView fx:id="quizTree" fitHeight="271.0" fitWidth="595.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="quizTree" fitHeight="254.0" fitWidth="380.0" layoutX="51.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../quiz1.png" />
                            </image>
@@ -592,7 +593,7 @@
                               <Font size="26.0" />
                            </font>
                         </Text>
-                        <Text fx:id="quizText" fill="#02abf5" layoutX="533.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="185.49536514282227">
+                        <Text fx:id="quizText" fill="#02abf5" layoutX="559.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="185.49536514282227">
                            <font>
                               <Font size="58.0" />
                            </font>
