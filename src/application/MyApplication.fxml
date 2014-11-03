@@ -413,7 +413,7 @@
                         <Button fx:id="resultButton" layoutX="699.0" layoutY="547.0" mnemonicParsing="false" onAction="#getResult" text="Get!" />
                         <ChoiceBox fx:id="dropDown" layoutX="524.0" layoutY="549.0" prefWidth="150.0" />
                         <Button fx:id="deleteButton" layoutX="152.0" layoutY="579.0" mnemonicParsing="false" onAction="#deleteNode" text="Delete" />
-                        <Text fx:id="or" fill="WHITE" layoutX="286.0" layoutY="600.0" strokeType="OUTSIDE" strokeWidth="0.0" text="or...">
+                        <Text fill="WHITE" layoutX="286.0" layoutY="600.0" strokeType="OUTSIDE" strokeWidth="0.0" text="or...">
                            <font>
                               <Font size="17.0" />
                            </font>

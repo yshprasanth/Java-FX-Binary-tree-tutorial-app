@@ -67,7 +67,7 @@ public class Controller implements Initializable {
 		// array of postorder pictures
 		i3 = new ImageView[] { inorder1, inorder2, inorder4, inorder3,
 				inorder8, inorder7, inorder6, inorder5 };
-		// manages the drop down menu int he free zone
+		// manages the drop down menu in the free mode
 		dropDown.setItems(FXCollections.observableArrayList("PreOrder",
 				"InOrder", "PostOrder", "Get Min", "Get Max", "Leafs",
 				"Parent-Child"));
@@ -85,83 +85,12 @@ public class Controller implements Initializable {
 	private ChoiceBox<String> dropDown; // drop down for traversal choices
 	
 	@FXML  // all buttons used in the GUI
-	private Button addButton;
-	@FXML
-	private Button addButton1;
-	@FXML
-	private Button deleteButton;
-	@FXML
-	private Button clear;
-	@FXML
-	private Button clear1;
-	@FXML
-	private Button next1;
-	@FXML
-	private Button next2;
-	@FXML
-	private Button next3;
-	@FXML
-	private Button next4;
-	@FXML
-	private Button next5;
-	@FXML
-	private Button next6;
-	@FXML
-	private Button next7;
-	@FXML
-	private Button next8;
-	@FXML
-	private Button next9;
-	@FXML
-	private Button next10;
-	@FXML
-	private Button next11;
-	@FXML
-	private Button next12;
-	@FXML
-	private Button next13;
-	@FXML
-	private Button restart;
-	@FXML
-	private Button subtreeButton;
-	@FXML
-	private Button inorderButton;
-	@FXML
-	private Button preorderButton;
-	@FXML
-	private Button postorderButton;
-	@FXML
-	private Button startButton;
-	@FXML
-	private Button depthButton;
-	@FXML
-	private Button heightButton;
-	@FXML
-	private Button resultButton;
-	@FXML
-	private Button pathButton;
-	@FXML
-	private Button q1Button;
-	@FXML
-	private Button q2Button;
-	@FXML
-	private Button q3Button;
-	@FXML
-	private Button q4Button;
-	@FXML
-	private Button q5Button;
-	@FXML
-	private Button q6Button;
-	@FXML
-	private Button q7Button;
-	@FXML
-	private Button q8Button;
-	@FXML
-	private Button q9Button;
-	@FXML
-	private Button q10Button;
-	@FXML
-	private Button reset;
+	private Button addButton, addButton1, deleteButton, clear, clear1, next1, 
+			next2, next3, next4, next5, next6, next7, next8, next9, next10, 
+			next11, next12, next13, restart, subtreeButton, inorderButton, 
+			preorderButton, postorderButton, startButton, depthButton, heightButton,
+			resultButton, pathButton, q1Button, q2Button, q3Button, q4Button, q5Button,
+			q6Button, q7Button, q8Button, q9Button, q10Button, reset;
 	
 	@FXML  //text fields used in the GUI
 	private TextField numberBox, numberBox1, depthBox, answer, pathBox, q1Ans,
@@ -171,65 +100,11 @@ public class Controller implements Initializable {
 	@FXML
 	private TextArea traverseOrder;
 	@FXML
-	private Text authors;
-	@FXML
-	private Text whatisBST = new Text();
-	@FXML
-	private Text whatisnotBST = new Text();
-	@FXML
-	private Text description1 = new Text();
-	@FXML
-	private Text description2 = new Text();
-	@FXML
-	private Text description3 = new Text();
-	@FXML
-	private Text description4 = new Text();
-	@FXML
-	private Text description5 = new Text();
-	@FXML
-	private Text description6 = new Text();
-	@FXML
-	private Text depthT = new Text();
-	@FXML
-	private Text heightT = new Text();
-	@FXML
-	private Text depthTextQ;
-	@FXML
-	private Text or;
-	@FXML
-	private Text selectDD;
-	@FXML
-	private Text depthorHeight;
-	@FXML
-	private Text pathText;
-	@FXML
-	private Text Balanced;
-	@FXML
-	private Text Unbalanced;
-	@FXML
-	private Text insText;
-	@FXML
-	private Text q1Text;
-	@FXML
-	private Text q2Text;
-	@FXML
-	private Text q3Text;
-	@FXML
-	private Text q4Text;
-	@FXML
-	private Text q5Text;
-	@FXML
-	private Text q6Text;
-	@FXML
-	private Text q7Text;
-	@FXML
-	private Text q8Text;
-	@FXML
-	private Text q9Text;
-	@FXML
-	private Text q10Text;
-	@FXML
-	private Text quizText;
+	private Text authors, whatisBST, whatisnotBST, description1, description2,
+			description3, description4, description5, description6, depthT, 
+			heightT, depthTextQ, selectDD, depthorHeight, pathText, Balanced, 
+			Unbalanced, insText, q1Text, q2Text, q3Text, q4Text, q5Text, q6Text,
+			q7Text, q8Text, q9Text, q10Text, quizText;
 	@FXML
 	private Circle circle1, circle2, circle3, circle4, circle5, circle6,
 			circle7, circle8, circle9, circle10, circle11, circle12, circle13,
@@ -253,53 +128,10 @@ public class Controller implements Initializable {
 			line101, line111, line121, line131, line141, line151, line161;
 
 	@FXML
-	private ImageView logo;
-	@FXML
-	private ImageView bst1;
-	@FXML
-	private ImageView bst2;
-	@FXML
-	private ImageView bst3;
-	@FXML
-	private ImageView bst4;
-	@FXML
-	private ImageView bst5;
-	@FXML
-	private ImageView subTree;
-	@FXML
-	private ImageView minandmax;
-	@FXML
-	private ImageView leafs;
-	@FXML
-	private ImageView inorder1;
-	@FXML
-	private ImageView inorder2;
-	@FXML
-	private ImageView inorder3;
-	@FXML
-	private ImageView inorder4;
-	@FXML
-	private ImageView inorder5;
-	@FXML
-	private ImageView inorder6;
-	@FXML
-	private ImageView inorder7;
-	@FXML
-	private ImageView inorder8;
-	@FXML
-	private ImageView path;
-	@FXML
-	private ImageView unbalancedTree;
-	@FXML
-	private ImageView balancedTree;
-	@FXML
-	private ImageView delete;
-	@FXML
-	private ImageView quizTree;
-	@FXML
-	private ImageView xMark;
-	@FXML
-	private ImageView checkMark;
+	private ImageView logo, bst1, bst2, bst3, bst4, bst5, subTree, minandmax, 
+			leafs, inorder1, inorder2, inorder3, inorder4, inorder5, inorder6, 
+			inorder7, inorder8, path, unbalancedTree, balancedTree, delete, 
+			quizTree, xMark, checkMark;
 
 	
 	private Circle[] c, c1;
@@ -307,9 +139,15 @@ public class Controller implements Initializable {
 	private Line[] l, l1;
 	private Tree tree = new Tree();
 	private Tree tree1 = new Tree();
-	private ImageView[] i1, i2, i3;
+	private ImageView[] i1, i2, i3; //different order pictures
 	private int arrayPos = 0;
 	private int arrayPos1 = 0;
+	//used to keep track of total right answers
+	private int totalRight = 0;
+	//used to keep track of wrong attempts per question
+	private int[] wrongCount = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+	private int count = 1;  // count for the traversals
+	private String order = "";  // display box for the traversals 
 
 	/**
 	 * Helper method to add and paint the nodes in the GUI.
@@ -471,19 +309,20 @@ public class Controller implements Initializable {
 		numberLabel.setVisible(false);
 		next3.setVisible(false);
 		// if tree isn't empty
-		if (tree.root != null) {
-			// make circles and text invisible
-			for (int i = 0; i < c.length; i++) {
-				c[i].setVisible(false);
-				t[i].setVisible(false);
-			}
-			// make lines invisible
-			for (int i = 0; i < l.length; i++) {
-				l[i].setVisible(false);
-			}
-			// set root to null
-			tree.root = null;
-			arrayPos = 0; // set to 0
+		
+		// make circles and text invisible
+		for (int i = 0; i < c.length; i++) {
+			c[i].setVisible(false);
+			t[i].setVisible(false);
+		}
+		// make lines invisible
+		for (int i = 0; i < l.length; i++) {
+			l[i].setVisible(false);
+		}
+
+		// set root to null
+		tree.root = null;
+		arrayPos = 0; // set to 0
 
 		heightT.setVisible(true);
 		depthT.setVisible(true);
@@ -491,6 +330,7 @@ public class Controller implements Initializable {
 		bst5.setVisible(true);
 		description4.setVisible(true);
 		next4.setVisible(true);
+		
 
 	}
 
@@ -532,9 +372,6 @@ public class Controller implements Initializable {
 		traverseOrder.setVisible(true);
 		next6.setVisible(true);
 	}
-
-	int count = 1;  // count for the traversals
-	String order = "";  // display box for the traversals 
 
 	/**
 	 * inorder traversal button, shows the user how 
@@ -852,6 +689,7 @@ public class Controller implements Initializable {
 					"Sorry you cannot enter the same number more than once");
 		}
 	}
+	
     /**
      * Adds and paints the numbers in the GUI
      * @param temp the number to be added and painted
@@ -1068,7 +906,11 @@ public class Controller implements Initializable {
 		}
 	}
 
-	
+	/**
+	 * Deletes a node from a tree in "free mode" and redraws the tree without
+	 * the deleted node
+	 * @param event the delete button is pressed
+	 */
 	public void deleteNode(ActionEvent event)
 	{
 		deleteSound.play();
@@ -1086,8 +928,6 @@ public class Controller implements Initializable {
 			return;
 		}
 
-		// delete the number 
-		tree1.delete(number);
 
 		if (tree1.root != null) { // clear previous tree
 			answer.setText("");
@@ -1098,14 +938,16 @@ public class Controller implements Initializable {
 			for (int i = 0; i < l.length; i++) {
 				l1[i].setVisible(false);
 			}
-
+			// delete the number 
+			tree1.delete(number);
+			
 			String s = tree1.preOrder(tree1.root); // get string of nodes
 			// create scanner from subtree
 			Scanner scan = new Scanner(s);
 			// set the root to null
 			tree1.root = null;
 			arrayPos1 = 0;
-
+			
 			// paint new tree
 			while (scan.hasNext()) {
 				int num = scan.nextInt();
@@ -1114,14 +956,7 @@ public class Controller implements Initializable {
 
 			scan.close();
 		}
-
-
-
 	}
-	//used to keep track of total right answers
-	int totalRight = 0;
-	//used to keep track of wrong attempts per question
-	int[] wrongCount = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
 	/**
 	 * Methods to manage each quiz question.
@@ -1414,9 +1249,8 @@ public class Controller implements Initializable {
 														// counter
 			wrongCount[i] = 0;
 		}
-
 	}
-
+	
 	private void clearMarks() {// clear marks
 		xMark.setVisible(false);
 		checkMark.setVisible(false);
@@ -1443,6 +1277,4 @@ public class Controller implements Initializable {
 		return true; 
 	}
 	
-	
-
 }

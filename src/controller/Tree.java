@@ -2,7 +2,7 @@ package controller;
 
 /**
  * This class implements the structure of a Binary Search Tree
- * to be used in the "Free Zone" and tutorial in our GUI.
+ * to be used in the "Free Mode" and Tutorial in our GUI.
  * ALL methods in this class were coded by both Rachelle Tobkes 
  * and Daniel Alvarez together.
  */
@@ -53,7 +53,7 @@ public class Tree {
 	public void add(int x) {
 		root = add(root, x, 600, 100, 589, 105);
 		root.bEY = root.cY + 20;  // root has larger radius therefore its edge
-								 // differs
+								  // differs from children nodes' radius
 	}
 
 	/**
@@ -62,28 +62,26 @@ public class Tree {
 	 * links the nodes to its parent node. The coordinates are set
 	 * depending the tree levels (depth).
 	 */
-	public TreeNode add(TreeNode node, int x, double cX, double cY, double tX,
-			                                                      double tY) {
+	public TreeNode add(TreeNode node, int x, double cX, double cY, double tX, double tY) {
 		// create a node with the given number 
 		TreeNode temp = new TreeNode(x);
 		
 		if (node == null) { // if we reached a null node where 
 			                // node should be added.
-			
 			node = temp;
-			node.cX = cX;  // set x-coordinate of circle
-			node.cY = cY;  // set y-coordinate of circle
+			//set coordinates needed to draw circles/lines/numbers
+			node.cX = cX;  // set x-coordinate of center of circle
+			node.cY = cY;  // set y-coordinate of center circle
 			node.tX = tX;  // set x-coordinate of text box
 			node.tY = tY;  // set y-coordinate of text box
-			node.eX = cX;   // set x-coordinate of line
-			node.tEY = cY - 15; 
-			node.bEY = cY + 15;
-			
-
+			node.eX = cX;  // set x-coordinate of edge of circle
+			//circle radius is 15 therefore:
+			node.tEY = cY - 15; //set y-coordinate of top edge of circle
+			node.bEY = cY + 15; //set y-coordinate of bottom edge of circle
 		} else if (x < node.info) { // value less than root
 			
 			node.left = add(node.left, x, cX - (200 / depthN(node) * 1.1),
-					  cY + 55, tX - (200 / depthN(node) * 1.1), tY + 55);
+					cY + 55, tX - (200 / depthN(node) * 1.1), tY + 55);
 			
 			node.left.parent = node; // link to parent
 		
@@ -94,9 +92,7 @@ public class Tree {
 			
 			node.right.parent = node; // link to parent 
 		}
-		
 		return node;
-
 	}
 
    
@@ -468,46 +464,40 @@ public class Tree {
 		
 		return s; // returns the string
 	}
-	
-	public int size()
-	{
-		return count;
-	}
-	
+
 	public void delete(int value) {
+		
 	    root = delete(root, value);
 	}
 
 	private TreeNode delete(TreeNode root, int value) {
-	    if (root == null) {
-	        return null;
-	    } else if (root.info > value) {
-	        root.left = delete(root.left, value);
-	    } else if (root.info < value) {
-	        root.right = delete(root.right, value);
-	    } else {  // root.data == value; remove this node
-	        if (root.right == null) {
-	            return root.left;    // no R child; replace w/ L
-	        } else if (root.left == null) {
-	            return root.right;   // no L child; replace w/ R
-	        } else {
-	            // both children; replace w/ min from R
-	            root.info = getMin(root.right);
-	            root.right = delete(root.right, root.info);
-	        }
-	    }
-	   return root; 
-	}
-	    
-	    public int getMin(TreeNode temp) {
-			
-			
-			while (temp.left != null) { // while there is a left node
-				temp = temp.left; // go to the left
+		if (root == null) {
+			return null;
+		} else if (root.info > value) {
+			root.left = delete(root.left, value);
+		} else if (root.info < value) {
+			root.right = delete(root.right, value);
+		} else {  // root.data == value; remove this node
+			if (root.right == null) {
+				return root.left;    // no R child; replace w/ L
+			} else if (root.left == null) {
+				return root.right;   // no L child; replace w/ R
+			} else {
+				// both children; replace w/ min from R
+				root.info = getMin(root.right);
+				root.right = delete(root.right, root.info);
 			}
-
-			return temp.info;
 		}
+		return root; 
+	}
+
+	private int getMin(TreeNode temp) {
+		while (temp.left != null) { // while there is a left node
+			temp = temp.left; // go to the left
+		}
+
+		return temp.info;
+	}
 
 
 }
