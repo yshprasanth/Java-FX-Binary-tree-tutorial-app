@@ -1347,6 +1347,7 @@ public class Controller implements Initializable {
 	 * @param event the reset button is pressed.
 	 */
 	public void resetTest(ActionEvent event) {
+		clearSound.play();
 		q1Ans.setVisible(true);
 		q1Button.setVisible(true);
 		q1Ans.setText("");
