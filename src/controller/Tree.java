@@ -9,8 +9,8 @@ package controller;
 public class Tree {
 
 	// create instance variables
-	public TreeNode root;  
-	private int height;
+	public TreeNode root;  // the root of the current tree
+	private int height;    // the height of the current tree
 
 	/**
 	 * Creates an empty tree with the root being null and a height of 0.
@@ -22,6 +22,7 @@ public class Tree {
 
 	/**
 	 * Helper method to get a subtree of a tree
+	 * Big-O Complexity = O(nlog(n))
 	 * @param node the node whose subtree we want
 	 * @return the subtree
 	 */
@@ -33,10 +34,12 @@ public class Tree {
     /**
      * Gets the subtree from a given node
      * @param node the node whose subtree we want
+     * Big-O Complexity = O(nlog(n)) because it uses add method while
+     * traversing each node.
      * @param t the new tree
      */
 	public void subTree(TreeNode node, Tree t) {
-		if (node != null) {
+		if (node != null) { 
 			t.add(node.info); // add the info to a new tree
 			subTree(node.left, t);  // call subtree recursively 
 			subTree(node.right, t);
@@ -44,22 +47,24 @@ public class Tree {
 	}
 
 	/**
-	 * A helper method to add nodes to a BST in the correct 
+	 * A helper method to add values to a BST in the correct 
 	 * positions. Sets up the coordinates for each node to
 	 * be drawn in the GUI.
 	 * @param the value to be inserted
 	 */
 	public void add(int x) {
-		root = add(root, x, 600, 100, 589, 105);
+		root = add(root, x, 600, 100, 589, 105); // root always center of GUI
 		root.bEY = root.cY + 20;  // root has larger radius therefore its edge
 								  // differs from children nodes' radius
 	}
 
 	/**
-	 * Adds nodes to a binary search tree as well as sets the coordinates
+	 * Adds values to a binary search tree as well as sets the coordinates
 	 * of the circles and lines to be drawn in our GUI. Also
 	 * links the nodes to its parent node. The coordinates are set
-	 * depending the tree levels (depth).
+	 * depending the tree levels (depth). Big-O Complexity = O((long(n))^2) because
+	 * cutting tree in half each time and also using depth method which is
+	 * O(log(n)).
 	 */
 	public TreeNode add(TreeNode node, int x, double cX, double cY, double tX, double tY) {
 		// create a node with the given number 
@@ -98,7 +103,8 @@ public class Tree {
 	/**
 	 * Depth method to be used to calculate the coordinates of 
 	 * the nodes for our GUI. This is only used in the add method.
-	 * @param node the node whose depth we want
+	 * @param node the node whose depth we want. Big-O Complexity = O(log(n))
+	 * because cuts the tree in half each time.
 	 * @return the depth
 	 */
 	private double depthN(TreeNode node) {
@@ -123,31 +129,30 @@ public class Tree {
 	}
 
 	/**
-	 * Calculates the depth of a node
-	 * @param value the value we want the depth of
+	 * Calculates the depth of a node. This method is used in free mode.
+	 * Big-O Complexity = O(log(n)) because cutting tree in half
+	 * @param value the value we want the depth of.
 	 * @return the depth
 	 */
-	public int depth(int value) {
-		int count = 0;
+	public int depth(int value){
+		int count = 0; // set count to 0
 
-		if (!contains(value)) // value not in tree
-		{
+		if (!contains(value)){ // value not in tree 
 			return -1;
 		}
 
-		if (root == null) // tree is empty
-		{
+		if (root == null){ // tree is empty
 			return -2;
-		} else {
+		}else{
 			TreeNode current = root;
 
-			while (value != current.info) // while value isn't found
-			{
-				if (value < current.info) // value less than current's data
-				{
+			while (value != current.info){ // while value isn't found
+			
+				if (value < current.info){ // value less than current's data
+				
 					count++; // increment depth
 					current = current.left; // go to the left
-				} else {
+				} else{
 					count++; // increment depth
 					current = current.right; // go to the right
 				}
@@ -159,12 +164,13 @@ public class Tree {
 
 	/**
 	 * Helper method to calculate the height of a tree
+	 * Big-O Complexity = O(n)
 	 * @return the height
 	 */
 	public int height() {
 		height = 0;
-		height(root);
-		height = height + 1;
+		height(root); 
+		height = height + 1; // add 1 because height is 1 more than depth
 
 		return height;
 	}
@@ -172,16 +178,15 @@ public class Tree {
 	/**
 	 * Calculates the height of a tree
 	 * by finding the largest depth in the tree.
+	 * Big-O Complexity = O(n) because visiting each node.
 	 * @param root the root of the tree
 	 */
 	public void height(TreeNode root) {
 		if (root != null) {
-			height(root.left);
-
-			if (depth(root.info) > height) {
+			height(root.left); 
+			if (depth(root.info) > height){ // set height to largest depth
 				height = depth(root.info);
 			}
-
 			height(root.right);
 		}
 
@@ -189,9 +194,10 @@ public class Tree {
 
 	/**
 	 * Finds the maximum value in the tree
+	 * Big-O Complexity = O(log(n)) because only traverses half of tree.
 	 * @return the maximum
 	 */
-	public int getMax() {
+	public int getMax(){
 		
 		TreeNode temp = root;
 
@@ -204,6 +210,7 @@ public class Tree {
 
 	/**
 	 * Finds the minimum in a tree
+	 * Big-O Complexity = O(log(n)) because only traversing half of tree.
 	 * @return the minimum value
 	 */
 	public int getMin() {
@@ -219,8 +226,8 @@ public class Tree {
 
 	/**
 	 * Returns true or false according to if a given value is 
-	 * in the tree, uses binary search method.
-	 * @param value the value we/re looking for
+	 * in the tree, uses binary search method. Big-O Complexity = O(log(n))
+	 * @param value the value we're looking for
 	 * @return true or false 
 	 */
 	public boolean contains(int value) {
@@ -228,33 +235,8 @@ public class Tree {
 	}
 
 	/**
-	 * Searches for a value in the tree and returns the node containing that
-	 * value
-	 * 
-	 * @param value
-	 *            the value we're looking for
-	 * @return the node with the specified value
-	 */
-	public TreeNode binarySearch1(int value) {
-		if (!contains(value) || root == null) {// not in tree or empty tree
-			return null;
-		}
-
-		TreeNode current = root;
-		while (value != current.info) {
-			if (value < current.info) {
-				current = current.left;
-			} else {
-				current = current.right;
-			}
-		}
-
-		return current;
-	}
-
-	/**
 	 * Binary search helper method
-	 * @param value the value to search for
+	 * @param value the value to search for. Big-O Complexity = O(log(n))
 	 * @return the node if found or null if not found
 	 */
 	public TreeNode binarySearch(int value) {
@@ -263,20 +245,21 @@ public class Tree {
 
 	/**
 	 * Searches for a node in the tree
-	 * @param root the root of the tree
+	 * @param root the root of the tree. Big-O Complexity = O(log(n)) because
+	 * traversing half the tree.
 	 * @param value the value we're looking for
 	 * @return the node containing the value
 	 */
-	public TreeNode binarySearch(TreeNode root, int value) {
+	public TreeNode binarySearch(TreeNode root, int value){
 		
 		TreeNode current = root;
 		
-		if (root == null) {
+		if (root == null) { // tree is empty
 			return null;
 		}
-		if (value < current.info && current.left != null) {
+		if (value < current.info && current.left != null){ // value less that current node
 			current = binarySearch(current.left, value);
-		} else if (value > current.info && current.right != null) {
+		} else if (value > current.info && current.right != null){ // value more than current node
 			current = binarySearch(current.right, value);
 		}
 		if (current != null && current.info != value)
@@ -286,6 +269,7 @@ public class Tree {
 
 	/**
 	 * Returns a string containing the path to a node
+	 * Big-O Complexity = O(log(n)) because cutting tree in half each time.
 	 * @param value the value whose path we want
 	 * @return the path of the tree in a string
 	 */
@@ -296,13 +280,11 @@ public class Tree {
 
 		String s = "";
 
-		if (!contains(value)) // value doesnt exist
-		{
+		if (!contains(value)){ // value doesn't exist
 			return "Sorry that value is not in the tree.";
 		}
 
-		if (root == null) // empty tree
-		{
+		if (root == null){ // empty tree
 			return "";
 		}
 
@@ -318,7 +300,7 @@ public class Tree {
 			}
 		}
 
-		s += current.info;
+		s += current.info; // append the value
 		
 		return s;
 
@@ -326,6 +308,7 @@ public class Tree {
 
 	/**
 	 * Helper method to determine the leaves in a tree
+	 * Big-O Complexity = O(n)
 	 * @param root the root of the tree
 	 * @return the string containing the leaves the a tree
 	 */
@@ -336,26 +319,27 @@ public class Tree {
 
 	/**
 	 * Creates a string stating the leafs of the tree.
+	 * Big-O Complexity = O(n) because traversing each node
 	 * @param s the string
 	 * @param root the root of the tree
 	 * @return the final string
 	 */
 	public String getLeafs(String s, TreeNode root) {
-		if (root != null) {
+		if (root != null){
 			s += getLeafs(root.left);
-			if (root.isLeaf()) // if node is a leaf
-			{
+			if (root.isLeaf()){ // if node is a leaf
+			
 				s += root.info + " ";
 			}
 			s += getLeafs(root.right);
 		}
 		
 		return s;  // return the string
-
 	}
 
 	/**
 	 * Helper method to print the child relations in a tree.
+	 * Big-O Complexity = O(n)
 	 * @param root the root of the tree
 	 * @return the sting of the child relations
 	 */
@@ -366,7 +350,7 @@ public class Tree {
 
 	/**
 	 * Creates a string of whom the nodes are a child of
-	 * and returns it.
+	 * and returns it. Big-O Complexity = O(n) because traversing each node
 	 * @param s the string
 	 * @param root the root of the tree
 	 * @return the final string
@@ -374,8 +358,8 @@ public class Tree {
 	public String printChildRelations(String s, TreeNode root) {
 		if (root != null) {
 			s += printChildRelations(root.left);
-			if (root.parent != null) // if node is a leaf
-			{
+			if (root.parent != null){ // if node is a leaf
+			
 				s += root.info + " is the child of " + root.parent.info + ", ";
 			}
 			s += printChildRelations(root.right);
@@ -386,7 +370,8 @@ public class Tree {
 
 	/**
 	 * A helper method for the preOrder method.
-	 * @param root the root of he tree
+	 * Big-O Complexity = O(n)
+	 * @param root the root of the tree
 	 * @return the string in a preorder fashion
 	 */
 	public String preOrder(TreeNode root) {
@@ -396,12 +381,12 @@ public class Tree {
 
 	/**
 	 * Creates a string of the values in the tree
-	 * in a preOrder fashion.
+	 * in a preOrder fashion. Big-O Complexity = O(n) because traversing each node.
 	 * @param s the string
 	 * @param root the root of the tree
 	 * @return the final string
 	 */
-	private String preOrder(String s, TreeNode root) {
+	private String preOrder(String s, TreeNode root){
 		if (root != null) {
 			s += (root.info + " ");
 			s += preOrder(root.left);
@@ -412,7 +397,7 @@ public class Tree {
 	}
 
 	/**
-	 * A helper method for the inorder method
+	 * A helper method for the inorder method. Big-O Complexity = O(n).
 	 * @param root the root of the tree
 	 * @return the string in a inorder fashion
 	 */
@@ -422,8 +407,8 @@ public class Tree {
 	}
 
 	/**
-	 * Creates a string of the values in the tree
-	 * in an inorder fashion
+	 * Creates a string of the values in the tree. 
+	 * in an inorder fashion. Big-O Complexity = O(n) because traversing each node.
 	 * @param s the string
 	 * @param root the root of the tree
 	 * @return the final string
@@ -439,7 +424,7 @@ public class Tree {
 
 	/**
 	 * Helper method for the postOrder method
-	 * @param root the root of the tree
+	 * @param root the root of the tree. Big-O Complexity = O(n)
 	 * @return
 	 */
 	public String postOrder(TreeNode root) {
@@ -449,7 +434,7 @@ public class Tree {
 
 	/**
 	 * Creates a string of the numbers in the tree
-	 * in a postorder fashion.
+	 * in a postorder fashion. Big-O Complexity = O(n) because traversing each node
 	 * @param s the string
 	 * @param root the root of the tree
 	 * @return the final string
@@ -464,25 +449,36 @@ public class Tree {
 		return s; // returns the string
 	}
 
+	/**
+	 * Helper method for the delete method. Big-O Complexity = O(log(n))
+	 * @param value the value to delete
+	 */
 	public void delete(int value) {
 		
 	    root = delete(root, value);
 	}
 
+	/**
+	 * Deletes a specified node from the tree.
+	 * Big-O Complexity = O(log(n)) because cutting tree in half each time.
+	 * @param root the root of the tree.
+	 * @param value the value we want to delete
+	 * @return the root of the tree after the deletion 
+	 */
 	private TreeNode delete(TreeNode root, int value) {
 		if (root == null) {
 			return null;
-		} else if (root.info > value) {
+		} else if (root.info > value) { // find the node
 			root.left = delete(root.left, value);
 		} else if (root.info < value) {
 			root.right = delete(root.right, value);
-		} else {  // root.data == value; remove this node
+		} else {            
 			if (root.right == null) {
-				return root.left;    // no R child; replace w/ L
+				return root.left;    //replace with left child
 			} else if (root.left == null) {
-				return root.right;   // no L child; replace w/ R
-			} else {
-				// both children; replace w/ min from R
+				return root.right;   // replace with right child
+			} else {                // replace with min from right subtree
+				
 				root.info = getMin(root.right);
 				root.right = delete(root.right, root.info);
 			}
@@ -490,6 +486,13 @@ public class Tree {
 		return root; 
 	}
 
+	/**
+	 * This method is only used in the delete method above.
+	 * It returns the minimum value in a tree. Big-O Complexity = O(log(n)
+	 * because only traversing half of tree.
+	 * @param temp the root of the tree
+	 * @return the minimum value 
+	 */
 	private int getMin(TreeNode temp) {
 		while (temp.left != null) { // while there is a left node
 			temp = temp.left; // go to the left

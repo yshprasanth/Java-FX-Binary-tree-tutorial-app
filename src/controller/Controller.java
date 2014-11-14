@@ -1,4 +1,3 @@
-
 package controller;
 
 /**
@@ -7,6 +6,7 @@ package controller;
  */
 
 // list of imports 
+import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.Scanner;
@@ -73,13 +73,14 @@ public class Controller implements Initializable {
 				"Parent-Child"));
 
 	}
-
-	private AudioClip wrong = new AudioClip("http://free.mp3songurls.com/1400615.mp3");
-	private AudioClip right = new AudioClip("http://free.mp3songurls.com/1400616.mp3");
-	private AudioClip add = new AudioClip("http://www.pachd.com/a/button/button1.wav");
-	private AudioClip deleteSound = new AudioClip("http://www.pachd.com/a/button/button2.wav");
-	private AudioClip select = new AudioClip("http://www.pachd.com/a/button/button20.wav");
-	private AudioClip clearSound = new AudioClip("http://www.pachd.com/a/button/button28.wav");
+	
+	// sound affects for the GUI
+	private final AudioClip wrong = new AudioClip(Controller.class.getResource("dang.mp3").toExternalForm());
+	private final AudioClip right = new AudioClip(Controller.class.getResource("sweet.mp3").toExternalForm());
+	private final AudioClip add = new AudioClip(Controller.class.getResource("button1wav.wav").toExternalForm());
+	private final AudioClip deleteSound = new AudioClip(Controller.class.getResource("button2wav.wav").toExternalForm());
+	private final AudioClip select = new AudioClip(Controller.class.getResource("button3wav.wav").toExternalForm());
+	private final AudioClip clearSound = new AudioClip(Controller.class.getResource("button4wav.wav").toExternalForm());
 	
 	@FXML // drop down instance variable
 	private ChoiceBox<String> dropDown; // drop down for traversal choices
@@ -95,17 +96,17 @@ public class Controller implements Initializable {
 	@FXML  //text fields used in the GUI
 	private TextField numberBox, numberBox1, depthBox, answer, pathBox, q1Ans,
 			q2Ans, q3Ans, q4Ans, q5Ans, q6Ans, q7Ans, q8Ans, q9Ans, q10Ans;
-	@FXML
+	@FXML // label used in GUI
 	private Label numberLabel, numberLabel1;
-	@FXML
+	@FXML  // Text area in GUI
 	private TextArea traverseOrder;
-	@FXML
+	@FXML // Text in GUI
 	private Text authors, whatisBST, whatisnotBST, description1, description2,
 			description3, description4, description5, description6, depthT, 
 			heightT, depthTextQ, selectDD, depthorHeight, pathText, Balanced, 
 			Unbalanced, insText, q1Text, q2Text, q3Text, q4Text, q5Text, q6Text,
 			q7Text, q8Text, q9Text, q10Text, quizText;
-	@FXML
+	@FXML // Circles for nodes
 	private Circle circle1, circle2, circle3, circle4, circle5, circle6,
 			circle7, circle8, circle9, circle10, circle11, circle12, circle13,
 			circle14, circle15, circle16, circle17, circle18, circle21,
@@ -113,7 +114,7 @@ public class Controller implements Initializable {
 			circle91, circle101, circle111, circle121, circle131, circle141,
 			circle151, circle161, circle171;
 
-	@FXML
+	@FXML // text for nodes
 	private Text value1, value2, value3, value4, value5, value6, value7,
 			value8, value9, value10, value11, value12, value13, value14,
 			value15, value16, value17, value18, value21, value31, value41,
@@ -121,19 +122,19 @@ public class Controller implements Initializable {
 			value121, value131, value141, value151, value161, value171,
 			description7, preorderText;
 
-	@FXML
+	@FXML // lines connecting nodes
 	private Line line1, line2, line3, line4, line5, line6, line7, line8, line9,
 			line10, line11, line12, line13, line14, line15, line16, line17,
 			line21, line31, line41, line51, line61, line71, line81, line91,
 			line101, line111, line121, line131, line141, line151, line161;
 
-	@FXML
+	@FXML // all images used
 	private ImageView logo, bst1, bst2, bst3, bst4, bst5, subTree, minandmax, 
 			leafs, inorder1, inorder2, inorder3, inorder4, inorder5, inorder6, 
 			inorder7, inorder8, path, unbalancedTree, balancedTree, delete, 
 			quizTree, xMark, checkMark;
 
-	
+	// declaration of arrays
 	private Circle[] c, c1;
 	private Text[] t, t1;
 	private Line[] l, l1;
@@ -142,11 +143,15 @@ public class Controller implements Initializable {
 	private ImageView[] i1, i2, i3; //different order pictures
 	private int arrayPos = 0;
 	private int arrayPos1 = 0;
+	
 	//used to keep track of total right answers
 	private int totalRight = 0;
+	
 	//used to keep track of wrong attempts per question
 	private int[] wrongCount = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+	
 	private int count = 1;  // count for the traversals
+	
 	private String order = "";  // display box for the traversals 
 
 	/**
@@ -154,14 +159,13 @@ public class Controller implements Initializable {
 	 * @param event clicking "add" button in tutorial portion
 	 */
 	public void addNumber(ActionEvent event) {
-		add.play();
-		if (!checkInput(numberBox))
+		add.play(); // play sound
+		
+		if (!checkInput(numberBox)) // verify input 
 			return;
+		
 		String temp = numberBox.getText(); // get the number entered
-		
-		if(!checkInput(numberBox)) // verify input 
-			return;
-		
+				
 		// add number if it doesn't already exist
 		if (!tree.contains(Integer.parseInt(temp))) {
 			add(temp);
@@ -784,7 +788,7 @@ public class Controller implements Initializable {
 	}
 
 	/**
-	 * Generates the height of the user's tree/
+	 * Generates the height of the user's tree
 	 * @param event the height button is pressed 
 	 */
 	public void getHeight(ActionEvent event) {
@@ -887,7 +891,7 @@ public class Controller implements Initializable {
 	}
 
 	/**
-	 * Generates and prints the path of the user;s tree/
+	 * Generates and prints the path of the user's tree
 	 * @param event the path button is pressed.
 	 */
 	public void getPath(ActionEvent event) {
@@ -918,16 +922,13 @@ public class Controller implements Initializable {
 		if (!checkInput(numberBox1))
 			return;
 
-		int number = Integer.parseInt(numberBox1.getText()); // get the value
-		// entered
-
-
+		int number = Integer.parseInt(numberBox1.getText()); // get the value enetred
+		
 		// if number doesn't exist 
 		if (!tree1.contains(number)) {
 			answer.setText("Sorry, that number isn't in the tree.");
 			return;
 		}
-
 
 		if (tree1.root != null) { // clear previous tree
 			answer.setText("");
@@ -1261,7 +1262,7 @@ public class Controller implements Initializable {
 	 * @return true or false if an integer was entered
 	 */
 	public boolean checkInput(TextField t) {
-		if (t.getText().equals("")) {
+		if (t.getText().equals("")) { // button was clicked w/ no input
 			answer.setText("Sorry, you need to enter a number");
 			return false;
 		}
